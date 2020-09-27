@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Barangay Clearance | Barangay Information System</title>
+
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+    <style type="text/css">
+        #Bg-Container{
+            width:7.3in;
+            height:11in;
+            margin:0.4in 0.5in 0.5in 0.5in;
+            background:#fff;
+            overflow:hidden;
+            color:black;
+            position:relative;
+            text-align:center;
+        }
+        .BG-header{
+            width:7.1in;
+            height:1.5in;
+            margin:0in 0.1in;
+            display:flex;
+            position:relative;
+            justify-content:space-between;
+            border:none;
+            border-bottom:1px solid gray;
+        }
+        .header-logo{
+            width:1.5in;
+            height:1.5in;
+            text-align:center;
+        }
+        .header-logo img{
+            width:1.3in;
+            height:1.3in;
+            border-radius:50%;
+        }
+        .header-title{
+            width:4in;
+            height:1.5in;
+            text-align:center;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-size:1em;
+            height:0.19in;
+            color:black;
+            width:3.8in;
+            margin:0 0.1in;
+            font-weight:normal;
+        }
+        h1{
+            font-weight:bold;
+        }
+        h3{
+            font-weight:bold;
+        }
+        h4{
+            font-weight:bold;
+        }
+        p{
+            padding:0px 0px;
+            margin:0px 0px;
+        }
+        textarea {
+            text-align:justify;
+            text-indent: 50px;
+            width:98%;
+            border:none;
+            background:transparent;
+            resize: none;
+        } 
+        .BG-body{
+            width:7.1in;
+            height:1in;
+            margin:0.2in 0.1in;
+            font-size:1em;
+            text-align:left;
+        }
+        .BG-body p{
+            padding:0px 0px;
+            margin:0px 0px;
+        }
+        .body-header{
+            width:6.7in;
+            height:0.2in;
+            margin:5px 0.2in;
+        }
+        .body-flex{
+            font-size:0.9em;
+            width:6.5in;
+            height:0.2in;
+            margin:5px 0.3in;
+            display:flex;
+            justify-content:space-between;
+        }
+        .flex-left{
+            width:48%;
+            height:0.2in;
+            display:flex;
+            justify-content:space-between;
+            margin:0px 0px; 
+        }
+        .left-title{
+            width:30%;
+            margin:0px 0px;
+        }
+        .left-data{
+            width:65%;
+            margin:0px 0px;
+        }
+        .flex-left input[type="text"]{
+            height:0.2in;
+            color:black;
+            border:none;
+            border:1px solid black;
+            width:100%;
+            padding:0px 10px;
+        }
+        .BG-footer{
+            width:7.1in;
+            height:7.7in;
+            margin:0in 0.1in;
+            font-size:1em;
+            background: url("./assets/img/logo\ \(1\).jpg") no-repeat;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border:3px solid #000000;
+            margin-top:0.2in;
+        }
+        .BG-databox{
+            width:100%;
+            height:7.7in;
+            text-align:left;
+            background: rgba(245, 245, 245, 0.9);
+        }
+        .BG-body{
+            margin-top:0in;
+            border:3px solid #000000;
+            border-top:none;
+        }
+        .databox{
+            width:100%;
+            margin:0px 1%;
+            background:transparent;
+        }
+        .content-box{
+            width:100%;
+            height:auto;
+            display:flex;
+            justify-content:space-around;
+        }
+        .contentbox-title{
+            width:15%;
+            height:auto;
+            background:transparent;
+            margin:0px 0px;
+        }
+        .contentbox-data{
+            width:85%;
+            height:auto;
+            background:transparent;
+            margin:0px 0px;
+        }
+        input[type="text"]{
+            width:100%;
+            background:transparent;
+            color:black;
+            border:3px solid black;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="Bg-Container">
+            <div class="BG-header">
+                <div class="header-logo">
+                    <img src="assets/img/logo (1).jpg">
+                </div>
+                <div class="header-title">
+                    <h6></h6>
+                    <h1>Republic of the Philippines</h1>
+                    <h2>Office of the Barangay Chairman</h3>
+                     <h3>Barangay 136 Zone 15 District II</h3>
+                    <h2>Pasay City, Metro Manila</h2>
+                    <h5></h5>
+                    <p></p>
+                </div>
+                <div class="header-logo">
+                   <img src="assets/img/logo_pasaycity.png">
+                </div>
+            </div>
+            <div class="BG-footer">
+                <div class="BG-databox" style="display:flex;justify-content:space-between;width:100%">
+                    <div class="databx" style="width:40%;height:100%;border-right:1px solid gray;">
+                        <div class="contentbox-data" style="width:100%;margin:auto 0%;text-align:left">
+                            <div class="Baragay-header" style="width:100%;background:transparent;height:50px;text-align:center">
+                                <p style="font-weight:bold;padding-top:20px;columns: #000000;;text-shadow: 0 0 1px black, 0 0 1px black;">BARANGAY OFFICIALS</p>
+                            </div>
+                            <div class="Baragay-header" style="width:98%;background:transparent;height:auto;text-align:center; margin: auto 1%">
+                                <p style="font-size:12px;margin-top:10px;text-decoration:underline">HON. KRISLYNE MARTY DE GUIA - YAMBOT</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY CHAIRWOMAN</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">HON. NEMESIO R. ANUNCIADO</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY KAGAWAD</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">HON. PATRICK LAURENZ A. CHING</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY KAGAWAD</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">HON. ROMMEL S. RAMOS</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY KAGAWAD</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">HON. JEROME C. MENDOZA</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY KAGAWAD</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">HON. NARCISO A. VERGEL JR.</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY KAGAWAD</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">HON. ERMILINDA J. CAMO</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY KAGAWAD</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">HON. GLORIA L. SALOMA</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY KAGAWAD</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">HON. KENNETH A. VILLANUEVA</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">SK CHAIRMAN</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">MANUEL C. ALMONTE</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY SECRETARY</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">JETHRO VIRREY PANCUBIT</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">BARANGAY TREASURER</p>
+                                <p style="font-size:12px;margin-top:4px;text-decoration:underline">MARY DOROTHY J. DE GUIA</p>
+                                <p style="font-size:10px;margin-top:-4px;font-weight:bold;">ADMINISTRATOR</p>
+                                <div class="body-flex" style="width:90%;height:auto;margin:0px 0px;margin-top:10px;background: rgba(35, 35, 35, 0.2)">
+                                    <div style="width:60%;color:white;">
+                                        <p style="height:auto;font-size:14px;margin-top:25px;text-shadow: 0 0 3px black, 0 0 3px black;" readonly><strong>Document ID:</strong></p>
+                                        <p style="height:auto;font-size:14px;color:black;" readonly><strong>DIBCB136Z15000001</strong></p>
+                                    </div>
+                                    <div class="datacontenxt" style="width:30%;margin:0px">
+                                        <img src="assets/qrgenerate/DIBCB136Z150000001.png" style="width:1in;height:1in;margin-top:0px"> 
+                                    </div>
+                                </div>
+                                <input type="text" readonly name="RDriverslicence" value="Prepared:" style="border:none;text-align:left;margin-top:10px">
+                                <input type="text" readonly name="RDriverslicence" value="" style="border:none;text-align:left;height:30px">
+                                <input type="text" readonly name="RDriverslicence" value="MANUEL C. ALMONTE" 
+                                    style="border:none;text-align:center;font-weight:bold;text-decoration:underline;">
+                                <input type="text" readonly name="RDriverslicence" value="Barangay Secretary" style="border:none;text-align:center">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="databox" style="width:60%">
+                        <p style="font-weight:bold;font-size:25px;margin-top:15px;width:100%;text-align:center;columns: #000000;;text-shadow: 0 0 2px black, 0 0 2px black;"> BARANGAY CLEARANCE</p>
+                        <div class="datacontenxt" style="width:100%;margin-top:15px;"> 
+                            <p style="text-align:justify;text-indent:10%;height:auto;font-size:16px;line-height: 2;" 
+                                readonly>This is to certify that <strong>MR. NICOLAS, ALBERT SANTOS ,</strong> 22 years old, 
+                                single and a resident of <strong>142 CABRERA STREET</strong> of this barangay, is of good moral character and is a law abiding citizen of this community.</p> 
+                            <p style="text-align:justify;text-indent:10%;height:auto;font-size:16px;line-height: 2;margin-top:10px" readonly>
+                                His reputation is beyond reproach. Further, he 
+                                <strong>has no derogatory and/or criminal records filed</strong> in this barangay.</p>
+                            <p style="text-align:justify;text-indent:10%;height:auto;font-size:16px;line-height: 2;margin-top:10px" readonly>Done and given this <strong>
+                                25th of September, 2020</strong>.</p>  
+                            <p style="text-align:justify;text-indent:10%;height:auto;font-size:16px;line-height: 2;margin-top:10px" readonly><strong>NOTE:
+                                </strong> This certification is issued for <strong>EDUCATION REQUIREMENT PURPOSES</strong> and shall expire after <strong>
+                                March 25, 2021.</strong></p>
+                        </div>
+                    <div class="flex" style="width:98%;margin-right:1%">
+                        <p style="text-align:justify;text-indent:10%;height:auto;font-size:16px;margin-top:15px;" readonly>This Certificate is not valid without Barangay dry seal.</p>
+                        <input type="text" readonly name="RDriverslicence" value="Attested:" style="border:none;text-align:left;margin-top:55px;">
+                        <input type="text" readonly name="RDriverslicence" value="" style="border:none;text-align:left;height:30px">
+                        <input type="text" readonly name="RDriverslicence" value="HON. KRISLYNE MARTY DE GUIA - YAMBOT" 
+                               style="border:none;text-align:center;font-weight:bold;text-decoration:underline">
+                        <input type="text" readonly name="RDriverslicence" value="Barangay Chairwoman" style="border:none;text-align:center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/initiate-datatables.js"></script>
+</body>
+
+</html>

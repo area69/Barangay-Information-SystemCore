@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Dashboard | Barangay Information System</title>
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/flagiconcss3/css/flag-icon.min.css" rel="stylesheet">
+    <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/flickity.css" media="screen">
+    <link href="assets/vendor/chartsjs/Chart.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="assets/img/Barangay-info-logo.png" alt="bootraper logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="index.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="resident-information.html"><i class="fas fa-address-card"></i> Resident Information</a>
+                </li>
+                <li>
+                    <a href="blotter-records.html"><i class="fas fa-table"></i>Incendent Records</a>
+                </li>
+                <li>
+                    <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
+                </li>
+                <li>
+                    <a href="documents.html"><i class="fas fa-file"></i> Documents</a>
+                </li>
+                <li>
+                    <a href="Accounts.html"><i class="fas fa-user-friends"></i> Accounts</a>
+                </li>
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i> System Configurations</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary default-secondary-menu"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown mr-1">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-bell"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>&nbsp;Juan Dela Cruz</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="login.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="content">
+                <div class="card-header bg-info text-white font-weight-bold">Dashboard</div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                            <div class="card">
+                                <div class="content bg-secondary text-white">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="fas fa-address-card"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail text-center">
+                                                <p><b>Resident Registrations</b></p>
+                                                <span class="number">6,267</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats text-white">
+                                            <i class="fas fa-redo-alt"></i> Increased by 40% in 30 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                            <div class="card">
+                                <div class="content bg-danger text-white">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="fas fa-clipboard-list"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail text-center">
+                                                <p><b>Request List</b></p>
+                                                <span class="number">400</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats text-white">
+                                            <i class="fas fa-calendar"></i> Increased by 15% in 30 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                            <div class="card">
+                                <div class="content bg-info text-white">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail text-center">
+                                                <p><b>Registered Voters</b></p>
+                                                <span class="number">1,560</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats  text-white">
+                                            <i class="fas fa-stopwatch"></i> Increased by 23% in 30 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                            <div class="card">
+                                <div class="content ">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="fas fa-address-card"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail text-center">
+                                                <p><b>Total Permits</b></p>
+                                                <span class="number">1,200</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="fas fa-clipboard-list"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail text-center">
+                                                <p><b>Total Certificates</b></p>
+                                                <span class="number">400</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail text-center">
+                                                <p><b>Total Blotters</b></p>
+                                                <span class="number">767</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                                    <div class="card-header font-weight-bold">Barangay Statistic Charts</div>
+                                        <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Business vs Residents</div>
+                                                            <div class="card-body">
+                                                                <p class="card-title"></p>
+                                                                <div class="canvas-wrapper">
+                                                                    <canvas class="chart" id="piechart"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Civil Status</div>
+                                                            <div class="card-body">
+                                                                <p class="card-title"></p>
+                                                                <div class="canvas-wrapper">
+                                                                    <canvas class="chart" id="piechart2"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Streets</div>
+                                                                <div class="card-body">
+                                                                    <p class="card-title"></p>
+                                                                    <div class="canvas-wrapper">
+                                                                        <canvas class="chart" id="piechart3"></canvas>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Religion</div>
+                                                            <div class="card-body">
+                                                                <p class="card-title"></p>
+                                                                <div class="canvas-wrapper">
+                                                                    <canvas class="chart" id="piechart4"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Voters</div>
+                                                            <div class="card-body">
+                                                                <p class="card-title"></p>
+                                                                <div class="canvas-wrapper">
+                                                                    <canvas class="chart" id="piechart5"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Male vs Female</div>
+                                                            <div class="card-body">
+                                                                <p class="card-title"></p>
+                                                                <div class="canvas-wrapper">
+                                                                    <canvas class="chart" id="piechart6"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Employed vs Unemployed</div>
+                                                            <div class="card-body">
+                                                                <p class="card-title"></p>
+                                                                <div class="canvas-wrapper">
+                                                                    <canvas class="chart" id="piechart7"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Citizenships</div>
+                                                            <div class="card-body">
+                                                                <p class="card-title"></p>
+                                                                <div class="canvas-wrapper">
+                                                                    <canvas class="chart" id="piechart8"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div> 
+                        <div class="row">
+                            <div class="col-md-10">
+                            </div>
+                            <div class="col-md-2">
+                                <a class="btn btn-outline-primary float-right"><i class="fas fa-file-alt"></i>&nbsp; Export File</a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header font-weight-bold">Street List Data</div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                        <thead class="text-center">
+                                          <tr>
+                                            <th><b>Street</b></th>
+                                            <th><b>Home</b></th>
+                                            <th><b>Family</b></th>
+                                            <th><b>Voter</b></th>
+                                            <th><b>Male</b></th>
+                                            <th><b>Female</b></th>
+                                            <th><b>Individual</b></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="text-center font-weight-bold">
+                                          <tr>
+                                            <td class="text-left"> Don Carlos Revilla </td>
+                                            <td> 9 </td>
+                                            <td> 93 </td>
+                                            <td> 78 </td>       
+                                            <td> 63 </td>
+                                            <td> 67 </td>
+                                            <td> 130 </td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <td class="text-left"> Giselle Park Plaza </td>
+                                            <td> 3 </td>
+                                            <td> 9 </td>
+                                            <td> 9 </td>
+                                            <td> 8 </td>
+                                            <td> 2 </td>
+                                            <td> 10 </td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <td class="text-left"> EDSA Interior</td>
+                                            <td> 2 </td>
+                                            <td> 11 </td>
+                                            <td> 9 </td>
+                                            <td> 3 </td>
+                                            <td> 8 </td>
+                                            <td> 11 </td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <td class="text-left"> EDSA Rotonda </td>
+                                            <td> 2 </td>
+                                            <td> 9 </td>
+                                            <td> 3 </td>
+                                            <td> 4 </td>
+                                            <td> 7 </td>
+                                            <td> 11 </td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <td class="text-left"> Genesis </td>
+                                            <td> 1 </td>
+                                            <td> 21 </td>
+                                            <td> 1 </td>
+                                            <td> 10 </td>
+                                            <td> 11 </td>
+                                            <td> 21 </td>
+                                          </tr>
+    
+                                          <tr>
+                                            <td class="text-left"> Taft </td>
+                                            <td> 1 </td>
+                                            <td> 1 </td>
+                                            <td> 1 </td>
+                                            <td> 1 </td>
+                                            <td> 0 </td>
+                                            <td> 1 </td>
+                                          </tr>
+                                          <tfoot class="text-center bg-secondary text-white font-weight-bold">
+                                              <tr>
+                                                  <td class="text-left">Total</td>
+                                                  <td>18</td>
+                                                  <td>144</td>
+                                                  <td>111</td>
+                                                  <td> 89 </td>
+                                                  <td> 95 </td>
+                                                  <td> 184 </td>
+                                              </tr>
+                                          </tfoot>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    .gallery {
+    background: #EEE;
+    }
+
+    .gallery-cell {
+    width: 28%;
+    height: 286px;
+    margin-right: 10px;
+    margin-top: 10px;
+    }
+    .gallery-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+    }
+    </style>
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/vendor/chartsjs/Chart.min.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/initiate-datatables.js"></script>
+    <script src="assets/js/flickity.pkgd.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Family Registration | Barangay Information System</title>
+
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <a href="dashboard.html"><img src="assets/images/Barangay-info-logo.png" alt="bootraper logo" class="app-logo"></a>
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="family-registration.html" class="active"><i class="fas fa-user"></i> Family</a>
+                </li>
+                <li>
+                    <a href="request-docu.html"><i class="fas fa-file"></i> Request Documents</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary default-secondary-menu"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown mr-1">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-bell"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>&nbsp;Juan Dela Cruz</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="profile.html" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="../website/index.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="content">
+                <div class="card-header bg-info text-white font-weight-bold">Family Member</div>
+                <div class="container-fluid">
+                        <div class="row mt-3">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="card">
+                                    <div class="card-header font-weight-bold">
+                                        <div class="row">
+                                            <div class="col-md-8"></div>
+                                            <div class="col-md-4">
+                                                <div class="row mt-2">
+                                                    <div class="col-md-6">
+                                                        <a class="btn btn-outline-primary form-control" data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-user-plus"></i>&nbsp; Select Member</a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="btn btn-outline-primary form-control" data-toggle="modal" data-target="#exampleModal1"><i class="fas fa-user-plus"></i>&nbsp; Add Member</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                     </div>
+
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <p class="modal-title font-weight-bold">View Family Member</p>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body text-left">
+                                                    <div class="content">
+                                                        <div class="header">
+                                                            <div class="main">
+                                                                <div class="image">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-4">
+                                                                <label>First Name</label>
+                                                                <input type="text" class="form-control" disabled placeholder="Albert">
+                                                            </div>
+                                                            <div class="form-group col-md-4">
+                                                                <label>Middle Name</label>
+                                                                <input type="text" class="form-control" disabled placeholder="Santos">
+                                                            </div>    
+                                                              <div class="form-group col-md-4">
+                                                                <label>Last Name</label>
+                                                                <input type="text" class="form-control" disabled placeholder="Nicolas">
+                                                            </div> 
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-3">
+                                                               <label>Civil Status</label>
+                                                               <input type="text" class="form-control" disabled placeholder="Single">
+                                                           </div>
+                                                            <div class="form-group col-md-3">
+                                                                <label>Contact Number</label>
+                                                                <input type="text" class="form-control" disabled placeholder="09123456789">
+                                                            </div>    
+                                                              <div class="form-group col-md-3">
+                                                                <label>Email Address</label>
+                                                                <input type="text" class="form-control" disabled placeholder="albertsantosnicolas@gmail.com">
+                                                            </div> 
+                                                            <div class="form-group col-md-3">
+                                                                <label>Address</label>
+                                                                <input type="text" class="form-control" disabled placeholder="Sta Cruz, Manila">
+                                                            </div>     
+                                                        </div>
+                                                        <div class="form-row">
+                                                              <div class="form-group col-md-3">
+                                                                <label>Date Registered</label>
+                                                                <input type="text" class="form-control" disabled placeholder="09/15/2020">
+                                                            </div> 
+                                                            <div class="form-group col-md-3">
+                                                                <label>Status</label>   
+                                                                 <input type="text" class="form-control" disabled placeholder="Active">
+                                                            </div>
+                                                            <div class="form-group col-md-3">
+                                                                <label>Family Role</label>
+                                                                <select class="form-control">
+                                                                    <option>Member</option>
+                                                                    <option>Head</option>
+                                                                </select>
+                                                            </div>
+                                                             <div class="form-group col-md-3">
+                                                                <label>Relation</label>
+                                                                <select class="form-control">
+                                                                    <option>Sibling</option>
+                                                                    <option>Grandparent</option>
+                                                                    <option>Relatives</option>
+                                                                    <option>Father</option>
+                                                                    <option>Mother</option>
+                                                                    <option>Child</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>                     
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-success"><b>Save</b></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <p class="modal-title font-weight-bold">Add Family Member</p>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body text-left">
+                                                    <div class="content">
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-4">
+                                                                <label>First Name</label>
+                                                                <input type="text" class="form-control" placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-4">
+                                                                <label>Middle Name</label>
+                                                                <input type="text" class="form-control" placeholder="">
+                                                            </div>    
+                                                              <div class="form-group col-md-4">
+                                                                <label>Last Name</label>
+                                                                <input type="text" class="form-control" placeholder="">
+                                                            </div> 
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-3">
+                                                                <label>Civil Status</label>
+                                                                <select class="form-control">
+                                                                    <option>Single</option>
+                                                                    <option>Married</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-md-3">
+                                                                <label>Age</label>
+                                                                <input type="text" class="form-control" placeholder="">
+                                                            </div>    
+                                                            <div class="form-group col-md-6">
+                                                                <label>Address</label>
+                                                                <input type="text" class="form-control" disabled placeholder="Sta Cruz, Manila">
+                                                            </div>     
+                                                        </div>
+                                                        <div class="form-row">
+                                                              <div class="form-group col-md-3">
+                                                                <label>Head of the Family</label>
+                                                                <input type="text" class="form-control" disabled placeholder="Juan Dela Cruz">
+                                                            </div> 
+                                                            <div class="form-group col-md-3">
+                                                                <label>Status</label>      
+                                                                 <select class="form-control">
+                                                                    <option>Active</option>
+                                                                    <option>Non Active</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-md-3">
+                                                                <label>Family Role</label>
+                                                                <select class="form-control">
+                                                                    <option>Member</option>
+                                                                </select>
+                                                            </div>
+                                                             <div class="form-group col-md-3">
+                                                                <label>Relation</label>
+                                                                <select class="form-control">
+                                                                    <option>Sibling</option>
+                                                                    <option>Grandparent</option>
+                                                                    <option>Relatives</option>
+                                                                    <option>Father</option>
+                                                                    <option>Mother</option>
+                                                                    <option>Child</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>                     
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-success"><b>Save</b></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <p class="modal-title font-weight-bold">Add Family Member</p>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body text-left">
+                                                    <div class="content">
+                                                        <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                                            <thead class="text-center">
+                                                            <tr>
+                                                                <th><b>First Name</b></th>
+                                                                <th><b>Middle Name</b></th>
+                                                                <th><b>Last Name</b></th>
+                                                                <th><b>Address</b></th>
+                                                                <th><b>Contact No</b></th>
+                                                                <th><b>Date Registered</b></th>
+                                                                <th><b>Actions</b></th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="text-center">
+                                                            <tr>
+                                                                <td> Marlon </td>
+                                                                <td> Reyes</td>
+                                                                <td> Santos </td>
+                                                                <td> Sta Cruz, Manila </td>
+                                                                <td> 09123456789 </td>
+                                                                <td> 09/15/2020 </td>
+                                                                <td> <button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal">View</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> Albert </td>
+                                                                <td> Santos </td>
+                                                                <td> Nicolas </td>
+                                                                <td> Sta Cruz, Manila </td>
+                                                                <td> 09123456789 </td>
+                                                                <td> 09/15/2020 </td>
+                                                                <td> <button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal">View</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> John </td>
+                                                                <td> Nicolas </td>
+                                                                <td> Reyes </td>
+                                                                <td> Sta Cruz, Manila </td>
+                                                                <td> 09123456789 </td>
+                                                                <td> 09/15/2020 </td>
+                                                                <td> <button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal">View</button></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <p class="card-title"></p>
+                                        <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                            <thead class="text-center">
+                                              <tr>
+                                                <th><b>Status</b></th>
+                                                <th><b>Relation</b></th>
+                                                <th><b>First Name</b></th>
+                                                <th><b>Middle Name</b></th>
+                                                <th><b>Last Name</b></th>
+                                                <th><b>Address</b></th>
+                                                <th><b>Contact No</b></th>
+                                                <th><b>Date Registered</b></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody class="text-center">
+                                              <tr>
+                                                <td><p class="btn-success text-white mt-3">Approved</p></td> 
+                                                <td> Child </td>
+                                                <td>John </td>
+                                                <td> Santos </td>
+                                                <td> Doe </td>
+                                                <td> Sta Cruz, Manila </td>
+                                                <td> 09123456789 </td>
+                                                <td> 09/15/2020 </td>
+                                              </tr>
+                                              <tr>
+                                                <td><p class="btn-warning text-white mt-3">Pending</p></td> 
+                                                <td> Child </td>
+                                                <td> Juan </td>
+                                                <td> Santos </td>
+                                                <td> Doe </td>
+                                                <td> Sta Cruz, Manila </td>
+                                                <td>  </td>
+                                                <td> 09/17/2020 </td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/initiate-datatables.js"></script>
+</body>
+
+</html>

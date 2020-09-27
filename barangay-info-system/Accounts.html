@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accounts | Barangay Information System</title>
+
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="assets/img/Barangay-info-logo.png" alt="bootraper logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="resident-information.html"><i class="fas fa-address-card"></i> Resident Information</a>
+                </li>
+                <li>
+                    <a href="blotter-records.html"><i class="fas fa-table"></i>Incendent Records</a>
+                </li>
+                <li>
+                    <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
+                </li>
+                <li>
+                    <a href="documents.html"><i class="fas fa-file"></i> Documents</a>
+                </li>
+                <li>
+                    <a href="Accounts.html" class="active"><i class="fas fa-user-friends"></i> Accounts</a>
+                </li>
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i> System Configurations</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary default-secondary-menu"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown mr-1">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-bell"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>&nbsp;Juan Dela Cruz</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="login.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="content">
+                <div class="card-header bg-info text-white font-weight-bold">Accounts</div>
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header font-weight-bold">
+                                   <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i>&nbsp; Add Accounts</a>
+                                </div>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <p class="modal-title font-weight-bold" id="exampleModalLabel">Account Forms</p>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-left">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label><b>Select Position</b></label>
+                                                        <select class="form-control">
+                                                            <option>-- Select Position --</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-md-12">
+                                                        <label><b>Select System Role</b></label>
+                                                        <select class="form-control">
+                                                            <option>-- Select System Role --</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                  <div class="row mt-3">
+                                                      <div class="col-md-12">
+                                                          <label><b>Select Name</b></label>
+                                                          <select class="form-control">
+                                                              <option>-- Select Name --</option>
+                                                          </select>
+                                                      </div>
+                                                  </div>
+                                                  <div class="row mt-3">
+                                                    <div class="col-md-12">
+                                                        <label><b>Upload a Picture</b></label>
+                                                        <div class="input-group">
+                                                            <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                                                aria-describedby="inputGroupFileAddon01">
+                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-success"><b>Save</b></button>
+                                            </div>
+                                        </div> 
+                                        </div>
+                                    </div>
+                                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <p class="modal-title font-weight-bold" id="exampleModalLabel">Account Forms</p>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-left">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label><b>Select Position</b></label>
+                                                        <select class="form-control">
+                                                            <option> SECRETARY </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-md-12">
+                                                        <label><b>Select System Role</b></label>
+                                                        <select class="form-control">
+                                                            <option> Super Admin </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                  <div class="row mt-3">
+                                                      <div class="col-md-12">
+                                                          <label><b>Select Name</b></label>
+                                                          <select class="form-control">
+                                                              <option> Juan Dela Cruz </option>
+                                                          </select>
+                                                      </div>
+                                                  </div>
+                                                  <div class="row mt-3">
+                                                    <div class="col-md-12">
+                                                        <label><b>Upload a Picture</b></label>
+                                                        <div class="input-group">
+                                                            <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                                                aria-describedby="inputGroupFileAddon01">
+                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-success"><b>Save</b></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>       
+                                
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                        <thead class="text-center">
+                                          <tr>
+                                            <th><b>Position</b></th>
+                                            <th><b>System Role</b></th>
+                                            <th><b>Name</b></th>
+                                            <th><b>Date Recorded</b></th>
+                                            <th><b>Actions</b></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                          <tr>
+                                            <td>SECRETARY</td>
+                                            <td>Super Admin</td>
+                                            <td> Juan Dela Cruz </td>
+                                            <td> 9/20/2020 </td>
+                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button>
+                                                <button type="button" class="btn btn-danger font-weight-bold">Delete</button></td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>  
+                             </div>
+                        </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header font-weight-bold">Admin Activity Logs</div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                        <thead class="text-center">
+                                          <tr>
+                                            <th><b>Name</b></th>
+                                            <th><b>Actions</b></th>
+                                            <th><b>Time</b></th>
+                                            <th><b>Date</b></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="text-center font-weight-bold">
+                                          <tr>
+                                            <td>Juan Dela Cruz </td>
+                                            <td class="text-left"> This user approved a Barangay Clearance </td>
+                                            <td> 10:00 PM </td>
+                                            <td> 09/22/2020 </td>       
+                                          </tr>
+                                          <tr>
+                                            <td>Juan Dela Cruz </td>
+                                            <td class="text-left"> This user visit Mr. John Doe Profile </td>
+                                            <td> 10:30 PM </td>
+                                            <td> 09/22/2020 </td>       
+                                          </tr>
+                                          <tr>
+                                            <td>Juan Dela Cruz </td>
+                                            <td class="text-left"> This user update Mr. John Doe Profile  </td>
+                                            <td> 11:00 PM </td>
+                                            <td> 09/22/2020 </td>       
+                                          </tr>
+                                          <tr>
+                                            <td>Juan Dela Cruz </td>
+                                            <td class="text-left"> This user print Mr. John Doe Barangay Clearance </td>
+                                            <td> 10:00 AM </td>
+                                            <td> 09/25/2020 </td>       
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/initiate-datatables.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

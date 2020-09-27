@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blotter Records | Barangay Information System</title>
+
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/flagiconcss3/css/flag-icon.min.css" rel="stylesheet">
+    <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="assets/img/Barangay-info-logo.png" alt="bootraper logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="resident-information.html"><i class="fas fa-address-card"></i> Resident Information</a>
+                </li>
+                <li>
+                    <a href="blotter-records.html" class="active"><i class="fas fa-table"></i>Incendent Records</a>
+                </li>
+                <li>
+                    <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
+                </li>
+                <li>
+                    <a href="documents.html"><i class="fas fa-file"></i> Documents</a>
+                </li>
+                <li>
+                    <a href="Accounts.html"><i class="fas fa-user-friends"></i> Accounts</a>
+                </li>
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i> System Configurations</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary default-secondary-menu"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown mr-1">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-bell"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>&nbsp;Juan Dela Cruz</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="login.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="content">
+                <div class="container-fluid">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="pill" href="#pills-blotter" role="tab">Blotter Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#pills-lupon" role="tab">Lupon Reports</a>  </li>
+                        <li class="nav-item">
+                          <a class="nav-link"  data-toggle="pill" href="#pills-kagawadrp" role="tab">Kagawad Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#pills-tanodrp" role="tab">Tanod Reports</a>
+                          </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-blotter" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header font-weight-bold">
+                                           <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i>&nbsp; Add Blotter</a>
+                                        </div>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold" id="exampleModalLabel">Blotter Form</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Complainant</b></label>
+                                                                <select class="form-control">
+                                                                    <option>-- Select Complainant --</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Address</b></label>
+                                                                <input type="text"  placeholder="Complainant Address" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Age</b></label>
+                                                                <input type="text"  placeholder="Complainant Age" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Contact Number</b></label>
+                                                                <input type="text"  placeholder="Complainant Contact Numer" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Complainee</b></label>
+                                                                <select class="form-control">
+                                                                    <option>-- Select Complainee --</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Address</b></label>
+                                                                <input type="text"  placeholder="Complainee Address" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Age</b></label>
+                                                                <input type="text"  placeholder="Complainee Age" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Contact Number</b></label>
+                                                                <input type="text"  placeholder="Complainee Contact Numer" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Complaint</b></label>
+                                                                <input type="text"  placeholder="Complaint" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Incident Type</b></label>
+                                                                <select class="form-control">
+                                                                    <option>Violence</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Status</b></label>
+                                                                <select class="form-control">
+                                                                    <option>Solved</option>
+                                                                    <option>Settled</option>
+                                                                    <option>Ongoing</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Incidence</b></label>
+                                                                <input type="text"  placeholder="Location of Incidence" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Date</b></label>
+                                                                <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Time</b></label>
+                                                                <input type="text"  placeholder="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Approve</b></button>
+                                                        <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold">View Blotter Records</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Complainant</b></label>
+                                                                <select class="form-control">
+                                                                    <option>-- Select Complainant --</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Address</b></label>
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Age</b></label>
+                                                                <input type="text"  placeholder="30" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Contact Number</b></label>
+                                                                <input type="text"  placeholder="09123456789" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Complainee</b></label>
+                                                                <select class="form-control">
+                                                                    <option>-- Select Complainee --</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Address</b></label>
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Age</b></label>
+                                                                <input type="text"  placeholder="29" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Contact Number</b></label>
+                                                                <input type="text"  placeholder="0987654321" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Complaint</b></label>
+                                                                <input type="text"  placeholder="Physical Injuries and Alarming Scandal" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Incident Type</b></label>
+                                                                <select class="form-control">
+                                                                    <option>Violence</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Status</b></label>
+                                                                <select class="form-control">
+                                                                    <option>Ongoing</option>
+                                                                    <option>Solved</option>
+                                                                    <option>Settled</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Incidence</b></label>
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="9/20/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="12:30 PM" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Date</b></label>
+                                                                <input type="text"  placeholder="9/20/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Time</b></label>
+                                                                <input type="text"  placeholder="10:30 AM" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Save</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b>Blotter Status</b></th>
+                                                    <th><b>Complainant</b></th>
+                                                    <th><b>Date Recorded</b></th>
+                                                    <th><b>Time Recorded</b></th>
+                                                    <th><b>Incident Type</b></th>
+                                                    <th><b>Incident Date</b></th>
+                                                    <th><b>Incident Time</b></th>
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                    <td> John S. Doe </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td> 12:20 PM </td>
+                                                    <td> Violence </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td> 10:30 AM </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-lupon" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header font-weight-bold">
+                                           <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModalLP"><i class="fas fa-user-plus"></i>&nbsp; Add Lupon</a>
+                                        </div>
+                                        <div class="modal fade" id="exampleModalLP" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold" id="exampleModalLabel">Lupon Form</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Complainant</b></label>
+                                                                <select class="form-control">
+                                                                    <option>-- Select Complainant --</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Address</b></label>
+                                                                <input type="text"  placeholder="Complainant Address" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Age</b></label>
+                                                                <input type="text"  placeholder="Complainant Age" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Contact Number</b></label>
+                                                                <input type="text"  placeholder="Complainant Contact Numer" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Complainee</b></label>
+                                                                <select class="form-control">
+                                                                    <option>-- Select Complainee --</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Address</b></label>
+                                                                <input type="text"  placeholder="Complainee Address" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Age</b></label>
+                                                                <input type="text"  placeholder="Complainee Age" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Contact Number</b></label>
+                                                                <input type="text"  placeholder="Complainee Contact Numer" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Complaint</b></label>
+                                                                <input type="text"  placeholder="Complaint" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Incident Type</b></label>
+                                                                <select class="form-control">
+                                                                    <option>Violence</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Status</b></label>
+                                                                <select class="form-control">
+                                                                    <option>Solved</option>
+                                                                    <option>Settled</option>
+                                                                    <option>Ongoing</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Incidence</b></label>
+                                                                <input type="text"  placeholder="Location of Incidence" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Date</b></label>
+                                                                <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Time</b></label>
+                                                                <input type="text"  placeholder="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Approve</b></button>
+                                                        <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="modal fade" id="exampleModalLP2" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold">View Lupon Records</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Complainant</b></label>
+                                                                <select class="form-control">
+                                                                    <option>-- Select Complainant --</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Address</b></label>
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Age</b></label>
+                                                                <input type="text"  placeholder="30" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Contact Number</b></label>
+                                                                <input type="text"  placeholder="09123456789" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Complainee</b></label>
+                                                                <select class="form-control">
+                                                                    <option>-- Select Complainee --</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Address</b></label>
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Age</b></label>
+                                                                <input type="text"  placeholder="29" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Contact Number</b></label>
+                                                                <input type="text"  placeholder="0987654321" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Complaint</b></label>
+                                                                <input type="text"  placeholder="Physical Injuries and Alarming Scandal" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Incident Type</b></label>
+                                                                <select class="form-control">
+                                                                    <option>Violence</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Status</b></label>
+                                                                <select class="form-control">
+                                                                    <option>Ongoing</option>
+                                                                    <option>Solved</option>
+                                                                    <option>Settled</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Incidence</b></label>
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="9/20/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="12:30 PM" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Date</b></label>
+                                                                <input type="text"  placeholder="9/20/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Time</b></label>
+                                                                <input type="text"  placeholder="10:30 AM" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Save</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b>Lupon Status</b></th>
+                                                    <th><b>Complainant</b></th>
+                                                    <th><b>Date Recorded</b></th>
+                                                    <th><b>Time Recorded</b></th>
+                                                    <th><b>Incident Type</b></th>
+                                                    <th><b>Incident Date</b></th>
+                                                    <th><b>Incident Time</b></th>
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                    <td> John S. Doe </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td> 12:20 PM </td>
+                                                    <td> Violence </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td> 10:30 AM </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalLP2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-kagawadrp" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header font-weight-bold">
+                                           <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModalKR"><i class="fas fa-user-plus"></i>&nbsp; Add Kagawad Reports</a>
+                                        </div>
+                                        <div class="modal fade" id="exampleModalKR" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold" id="exampleModalLabel">Kagawad Form</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>   
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Kagawad</b></label>
+                                                                <input type="text"  placeholder="Juan Dela Cruz" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="9/25/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="8:50 PM" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Reports</b></label>
+                                                                <textarea type="text" class="form-control"> </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Approve</b></button>
+                                                        <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="modal fade" id="exampleModalKR2" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold">View Lupon Records</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Kagawad</b></label>
+                                                                <input type="text"  placeholder="Juan Dela Cruz" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="9/25/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="8:50 PM" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Reports</b></label>
+                                                                <textarea type="text" class="form-control"> </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Save</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b>Kagawad</b></th>
+                                                    <th><b>Date Recorded</b></th>
+                                                    <th><b>Time Recorded</b></th>
+                                                    <th><b>Reports</b></th>
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td> John S. Doe </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td> 12:20 PM </td>
+                                                    <td> Sample Report </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalKR2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-tanodrp" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header font-weight-bold">
+                                           <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModalTR"><i class="fas fa-user-plus"></i>&nbsp; Add Tanod Reports</a>
+                                        </div>
+                                        <div class="modal fade" id="exampleModalTR" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold" id="exampleModalLabel">Tanod Form</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>   
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Tanod</b></label>
+                                                                <input type="text"  placeholder="Juan Dela Cruz" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="9/25/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="8:50 PM" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Reports</b></label>
+                                                                <textarea type="text" class="form-control"> </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Approve</b></button>
+                                                        <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="modal fade" id="exampleModalTR2" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold">View Tanod Records</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Tanod</b></label>
+                                                                <input type="text"  placeholder="Juan Dela Cruz" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="9/25/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="8:50 PM" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Reports</b></label>
+                                                                <textarea type="text" class="form-control"> </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Save</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b>Tanod</b></th>
+                                                    <th><b>Date Recorded</b></th>
+                                                    <th><b>Time Recorded</b></th>
+                                                    <th><b>Reports</b></th>
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td> John S. Doe </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td> 12:20 PM </td>
+                                                    <td> Sample Report </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalTR2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/initiate-datatables.js"></script>
+</body>
+
+</html>

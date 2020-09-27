@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>System Configurations | Barangay Information System</title>
+
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="assets/img/Barangay-info-logo.png" alt="bootraper logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="resident-information.html"><i class="fas fa-address-card"></i> Resident Information</a>
+                </li>
+                <li>
+                    <a href="blotter-records.html"><i class="fas fa-table"></i>Incendent Records</a>
+                </li>
+                <li>
+                    <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
+                </li>
+                <li>
+                    <a href="documents.html"><i class="fas fa-file"></i> Documents</a>
+                </li>
+                <li>
+                    <a href="Accounts.html"><i class="fas fa-user-friends"></i> Accounts</a>
+                </li>
+                <li>
+                    <a href="settings.html" class="active"><i class="fas fa-cog"></i> System Configurations</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary default-secondary-menu"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown mr-1">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-bell"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>&nbsp;Juan Dela Cruz</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="login.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="card-header bg-info text-white font-weight-bold">System Configurations</div>
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6 col-md-6 col-lg-6 mt-3">
+                            <div class="card">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">General</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="system-tab" data-toggle="tab" href="#system" role="tab" aria-controls="system" aria-selected="false">System</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="email-tab" data-toggle="tab" href="#email" role="tab" aria-controls="email" aria-selected="false">Email</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="appearance-tab" data-toggle="tab" href="#appearance" role="tab" aria-controls="appearance" aria-selected="false">Appearance</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Officials-tab" data-toggle="tab" href="#Officials" role="tab" aria-controls="attributions" aria-selected="false">Officials</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade active show" id="general" role="tabpanel" aria-labelledby="general-tab">
+                                        <div class="row  justify-content-center">
+                                        <div class="col-md-6 ">
+                                            <p class="text-muted">General settings such as, site title, site description, address and so on.</p>
+                                            <div class="form-group">
+                                                <label for="site-title" class="form-control-label">Site Title</label>
+                                                <input type="text" name="site_title" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="site-description" class="form-control-label">Site Description</label>
+                                                <textarea class="form-control" name="site_description"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label">Site Logo</label>
+                                                <div class="custom-file">
+                                                    <input type="file" name="site_logo" class="custom-file-input">
+                                                    <label class="custom-file-label">Choose File</label>
+                                                </div>
+                                                <small class="text-muted">The image must have a maximum size of 1MB</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label">Favicon</label>
+                                                <div class="custom-file">
+                                                    <input type="file" name="site_favicon" class="custom-file-input">
+                                                    <label class="custom-file-label">Choose File</label>
+                                                </div>
+                                                <small class="text-muted">The image must have a maximum size of 1MB</small>
+                                            </div>
+                                            <div class="form-group text-right">
+                                                <button class="btn btn-success" type="submit"><i class="fas fa-check"></i> Save</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="system" role="tabpanel" aria-labelledby="system-tab">
+                                        <div class="col-md-6">
+                                            <p class="text-muted">Application settings, language, time zones and other environments.</p>
+                                            <div class="form-group">
+                                                <label for="language" class="form-control-label">Default Language</label>
+                                                <select class="form-control" name="language">
+                                                    <option value="en">English</option>
+                                                    <option value="es">Spanish</option>
+                                                    <option value="fr">French</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dateformat" class="form-control-label">Date format</label>
+                                                <select class="form-control" name="dateformat">
+                                                    <option value="">mm-dd-yyyy</option>
+                                                    <option value="">dd-mm-yyyy</option>
+                                                    <option value="">yyyy-mm-dd</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label">IP Restriction</label>
+                                                <textarea class="form-control" name="" rows="3" placeholder="Enter IP addresses, if more than one add comma after each IP address"></textarea>
+                                            </div>
+                                            <div class="form-group text-right">
+                                                <button class="btn btn-success" type="submit"><i class="fas fa-check"></i> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email-tab">
+                                        <div class="col-md-6">
+                                            <p class="text-muted">Email SMTP settings, notifications and others related to email.</p>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">Protocol</label>
+                                                <select name="" class="form-control">
+                                                    <option value="">Select Protocol</option>
+                                                    <option value="">SMTP</option>
+                                                    <option value="">Sendmail</option>
+                                                    <option value="">PHP Mailer</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">SMTP Host</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">SMTP Username</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">SMTP Security</label>
+                                                <select name="" class="form-control">
+                                                    <option value="">Select SMTP Security</option>
+                                                    <option value="">TLS</option>
+                                                    <option value="">SSL</option>
+                                                    <option value="">None</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">SMTP Port</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">SMTP Password</label>
+                                                <input type="password" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group text-right">
+                                                <button class="btn btn-success" type="submit"><i class="fas fa-check"></i> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="appearance" role="tabpanel" aria-labelledby="appearance-tab">
+                                        <div class="col-md-6">
+                                            <p class="text-muted">Settings about appearance such as themes, icon and color scheme.</p>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">Theme</label>
+                                                <select name="" class="form-control">
+                                                    <option value="">Select theme</option>
+                                                    <option value="">Dark</option>
+                                                    <option value="">Light</option>
+                                                    <option value="">Classic</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">Display colored icons</label>
+                                                <select name="" class="form-control">
+                                                    <option value="">Enabled</option>
+                                                    <option value="">Disabled</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-control-label">Set default font size</label>
+                                                <select name="" class="form-control">
+                                                    <option value="">10</option>
+                                                    <option value="">12</option>
+                                                    <option value="">13</option>
+                                                    <option value="">14</option>
+                                                    <option value="">15</option>
+                                                    <option value="">16</option>
+                                                    <option value="">17</option>
+                                                    <option value="">18</option>
+                                                    <option value="">19</option>
+                                                    <option value="">20</option>
+                                                </select>
+                                            </div>
+                                        
+                                            <div class="form-group text-right">
+                                                <button class="btn btn-success" type="submit"><i class="fas fa-check"></i> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="Officials" role="tabpanel" aria-labelledby="Officials-tab">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Documents | Barangay Information System</title>
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="assets/img/Barangay-info-logo.png" alt="bootraper logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="resident-information.html"><i class="fas fa-address-card"></i> Resident Information</a>
+                </li>
+                <li>
+                    <a href="blotter-records.html"><i class="fas fa-table"></i> Blotter Records</a>
+                </li>
+                <li>
+                    <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
+                </li>
+                <li>
+                    <a href="documents.html" class="active"><i class="fas fa-file"></i> Documents</a>
+                </li>
+                <li>
+                    <a href="Accounts.html"><i class="fas fa-user-friends"></i> Accounts</a>
+                </li>
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i> System Configurations</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary default-secondary-menu"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown mr-1">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-bell"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>&nbsp;Juan Dela Cruz</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="login.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="content">
+                <div class="card-header bg-info text-white font-weight-bold">Documents Request</div>
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <p class="modal-title font-weight-bold" id="exampleModalLabel">Request Forms</p>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="row">
+                                                        <label class="font-weight-bold ">Tracking ID</label>
+                                                        <div class="col-md-12 col-12 text-center border">
+                                                            <img src="../client-registration/assets/images/barangayclearanceqrcode.png" alt="">
+                                                            <h6>BCNB146Z150000001</h6>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-row mt-3">
+                                                    <div class="form-group col-md-4">
+                                                        <label class="font-weight-bold">Name</label>
+                                                        <input type="text" class="form-control text-center" placeholder="Albert Santos Nicolas" disabled>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label class="font-weight-bold">Age</label>
+                                                        <input type="text" class="form-control text-center" placeholder="22 Yeards Old" disabled>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label class="font-weight-bold">Civil Status</label>
+                                                        <input type="text" class="form-control text-center" placeholder="Single" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label class="font-weight-bold">Date Requested</label>
+                                                        <input type="text" class="form-control text-center" placeholder="9/25/2020" disabled>
+                                                    </div>
+                                                    <div class="form-group col-md-8">
+                                                        <label class="font-weight-bold">Address</label>
+                                                        <input type="text" class="form-control text-center" placeholder="142 Cabrera Street Barangay 136 Zone 15 Pasay City, Metro Manila" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label class="font-weight-bold">Document Expiration</label>
+                                                        <input type="text" class="form-control text-center" placeholder="3/25/2021" disabled>
+                                                    </div>
+                                                    <div class="form-group col-md-8">
+                                                        <label class="font-weight-bold">Records</label>
+                                                        <input type="text" class="form-control text-center" placeholder="Has no derogatory and/or criminal records filed" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-success"><a href="pdfbrgyclearance.html" target="_blank"><b>Approve</b></a></button>
+                                                <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                        <thead class="text-center">
+                                        <tr>
+                                            <th><b>Status</b></th>
+                                            <th><b>Tracking ID</b></th>
+                                            <th><b>Resident Name</b></th>
+                                            <th><b>Address</b></th>
+                                            <th><b>Purpose</b></th>
+                                            <th><b>Date Requested</b></th>
+                                            <th><b>Actions</b></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                        <tr>
+                                            <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                            <td> BCB146Z150000001 </td>
+                                            <td> John S. Doe </td>
+                                            <td> 142 Cabrera Street </td>
+                                            <td> Education Requirement </td>
+                                            <td> 9/25/2020 </td>
+                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                            <td> COIB146Z150000001 </td>
+                                            <td> Albert S. Nicolas </td>
+                                            <td> 142 Cabrera Street </td>
+                                            <td> Occupation Requirement </td>
+                                            <td> 9/25/2020 </td>
+                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                            <td> CORB146Z150000001 </td>
+                                            <td> John N. Reyes </td>
+                                            <td> 142 Cabrera Street </td>
+                                            <td> Financial Requirement </td>
+                                            <td> 9/25/2020 </td>
+                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                            <td> RBIIB146Z150000001 </td>
+                                            <td> Marlon R. Santos </td>
+                                            <td> 142 Cabrera Street </td>
+                                            <td> Education Assistance </td>
+                                            <td> 9/25/2020 </td>
+                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>    
+                            </div>
+                        </div>  
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/initiate-datatables.js"></script>
+</body>
+
+</html>
