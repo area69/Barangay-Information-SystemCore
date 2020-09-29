@@ -31,6 +31,9 @@
                     <a href="blotter-records.html"><i class="fas fa-table"></i>Incendent Records</a>
                 </li>
                 <li>
+                    <a href="blotter-records.html"><i class="fas fa-file-medical"></i>Health Reports</a>
+                </li>
+                <li>
                     <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
                 </li>
                 <li>
@@ -342,6 +345,21 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div> 
+                                            <div class="gallery-cell">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">Senior Citizen vs Infant</div>
+                                                            <div class="card-body">
+                                                                <p class="card-title"></p>
+                                                                <div class="canvas-wrapper">
+                                                                    <canvas class="chart" id="piechart9"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div> 
@@ -350,7 +368,8 @@
                             <div class="col-md-10">
                             </div>
                             <div class="col-md-2">
-                                <a class="btn btn-outline-primary float-right"><i class="fas fa-file-alt"></i>&nbsp; Export File</a>
+                                <label for="file-upload" class="btn btn-outline-primary float-right"><i class="fas fa-file-alt"></i> &nbsp; Export File</label>
+                                <input id="file-upload" type="file"/>
                             </div>
                         </div> 
                     </div>
@@ -453,25 +472,6 @@
             </div>
         </div>
     </div>
-    <style>
-    .gallery {
-    background: #EEE;
-    }
-
-    .gallery-cell {
-    width: 28%;
-    height: 286px;
-    margin-right: 10px;
-    margin-top: 10px;
-    }
-    .gallery-cell:before {
-    display: block;
-    text-align: center;
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
-    }
-    </style>
     <script src="assets/vendor/jquery3/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>

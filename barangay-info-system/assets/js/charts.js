@@ -6,6 +6,7 @@ var chart5 = document.getElementById("piechart5");
 var chart6 = document.getElementById('piechart6');
 var chart7 = document.getElementById("piechart7");
 var chart8 = document.getElementById("piechart8");
+var chart9 = document.getElementById("piechart9");
 
 var myChart1 = new Chart(chart1, {
     type: 'pie',
@@ -247,3 +248,32 @@ var myChart8 = new Chart(chart8, {
     }
 });
 
+var myChart9 = new Chart(chart9, {
+    type: 'pie',
+    data: {
+        labels: ["Senior Citizenship", "Infant"],
+        datasets: [{
+            data: ["59", "104"],
+            backgroundColor: ["#DE542C","#795548"]
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        legend: {display: true,fullWidth: true,position: 'right',},
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    var allData = data.datasets[tooltipItem.datasetIndex].data;
+                    var tooltipLabel = data.labels[tooltipItem.index];
+                    var tooltipData = allData[tooltipItem.index];
+                    var total = 0;
+                    var label = tooltipLabel.split(" - ");
+                    for (var i in allData) {total += allData[i];}
+                    var tooltipPercentage = Math.round((tooltipData / total) * 100);
+                    return label[0] + ' (' + tooltipPercentage + '%)';
+                }
+            }
+        },
+    }
+});
