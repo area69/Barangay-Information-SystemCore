@@ -7,6 +7,7 @@
     <title>Schedules | Barangay Information System</title>
     <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
 
 </head>
@@ -28,7 +29,7 @@
                     <a href="blotter-records.html"><i class="fas fa-table"></i>Incendent Records</a>
                 </li>
                 <li>
-                    <a href="blotter-records.html"><i class="fas fa-file-medical"></i>Health Reports</a>
+                    <a href="healthrecords.html"><i class="fas fa-file-medical"></i>Health Reports</a>
                 </li>
                 <li>
                     <a href="schedules.html" class="active"><i class="fas fa-calendar"></i> Schedules</a>
@@ -127,7 +128,7 @@
                                 </div>
                                     <div class="card-body">
                                         <p class="card-title"></p>
-                                        <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                        <table class="table table-hover table-bordered dataTables-example" width="100%">
                                             <thead class="text-center">
                                               <tr>
                                                 <th><b>Status</b></th>
@@ -177,6 +178,8 @@
     <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
     <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/initiate-datatables.js"></script>
 </body>
 
 </html>

@@ -10,6 +10,7 @@
     <link href="assets/css/master.css" rel="stylesheet">
     <link href="assets/vendor/flagiconcss3/css/flag-icon.min.css" rel="stylesheet">
     <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+    <link href="assets/vendor/chartsjs/Chart.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
 </head>
 
@@ -30,7 +31,7 @@
                     <a href="blotter-records.html" class="active"><i class="fas fa-table"></i>Incendent Records</a>
                 </li>
                 <li>
-                    <a href="blotter-records.html"><i class="fas fa-file-medical"></i>Health Reports</a>
+                    <a href="healthrecords.html"><i class="fas fa-file-medical"></i>Health Reports</a>
                 </li>
                 <li>
                     <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
@@ -77,19 +78,22 @@
 
             <div class="content">
                 <div class="container-fluid">
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item">
-                          <a class="nav-link active" data-toggle="pill" href="#pills-blotter" role="tab">Blotter Reports</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#pills-lupon" role="tab">Lupon Reports</a>  </li>
-                        <li class="nav-item">
-                          <a class="nav-link"  data-toggle="pill" href="#pills-kagawadrp" role="tab">Kagawad Reports</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#pills-tanodrp" role="tab">Tanod Reports</a>
+                            <a class="nav-link active" data-toggle="pill" href="#pills-blotter" role="tab">Blotter Reports</a>
                           </li>
-                      </ul>
+                          <li class="nav-item">
+                              <a class="nav-link" data-toggle="pill" href="#pills-lupon" role="tab">Lupon Reports</a>  </li>
+                          <li class="nav-item">
+                            <a class="nav-link"  data-toggle="pill" href="#pills-kagawadrp" role="tab">Kagawad Reports</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" data-toggle="pill" href="#pills-tanodrp" role="tab">Tanod Reports</a>
+                            </li> 
+                            <li class="nav-item">
+                              <a class="nav-link" data-toggle="pill" href="#pills-statistic" role="tab">Statistical Reports</a>
+                            </li>
+                    </ul>
                       <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-blotter" role="tabpanel">
                             <div class="row mt-3">
@@ -301,7 +305,7 @@
         
                                         <div class="card-body">
                                             <p class="card-title"></p>
-                                            <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
                                                 <thead class="text-center">
                                                   <tr>
                                                     <th><b>Blotter Status</b></th>
@@ -316,7 +320,7 @@
                                                 </thead>
                                                 <tbody class="text-center">
                                                   <tr>
-                                                    <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                    <td><p class="btn-warning text-white mt-3">Pending</p></td>
                                                     <td> John S. Doe </td>
                                                     <td> 9/20/2020 </td>
                                                     <td> 12:20 PM </td>
@@ -542,7 +546,7 @@
         
                                         <div class="card-body">
                                             <p class="card-title"></p>
-                                            <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
                                                 <thead class="text-center">
                                                   <tr>
                                                     <th><b>Lupon Status</b></th>
@@ -557,7 +561,7 @@
                                                 </thead>
                                                 <tbody class="text-center">
                                                   <tr>
-                                                    <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                    <td><p class="btn-warning text-white mt-3">Pending</p></td>
                                                     <td> John S. Doe </td>
                                                     <td> 9/20/2020 </td>
                                                     <td> 12:20 PM </td>
@@ -659,9 +663,10 @@
         
                                         <div class="card-body">
                                             <p class="card-title"></p>
-                                            <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
                                                 <thead class="text-center">
                                                   <tr>
+                                                    <th><b>Status</b></th>
                                                     <th><b>Kagawad</b></th>
                                                     <th><b>Date Recorded</b></th>
                                                     <th><b>Time Recorded</b></th>
@@ -671,6 +676,7 @@
                                                 </thead>
                                                 <tbody class="text-center">
                                                   <tr>
+                                                    <td><p class="btn-warning text-white mt-3">Pending</p></td>
                                                     <td> John S. Doe </td>
                                                     <td> 9/20/2020 </td>
                                                     <td> 12:20 PM </td>
@@ -770,9 +776,10 @@
         
                                         <div class="card-body">
                                             <p class="card-title"></p>
-                                            <table class="table table-hover table-bordered" id="dataTables-example" width="100%">
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
                                                 <thead class="text-center">
                                                   <tr>
+                                                    <th><b>Status</b></th>
                                                     <th><b>Tanod</b></th>
                                                     <th><b>Date Recorded</b></th>
                                                     <th><b>Time Recorded</b></th>
@@ -782,11 +789,123 @@
                                                 </thead>
                                                 <tbody class="text-center">
                                                   <tr>
+                                                    <td><p class="btn-warning text-white mt-3">Pending</p></td>
                                                     <td> John S. Doe </td>
                                                     <td> 9/20/2020 </td>
                                                     <td> 12:20 PM </td>
                                                     <td> Sample Report </td>
                                                     <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalTR2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-statistic" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="card-header">Blotter Records Graphs</div>
+                                                <div class="card-body">
+                                                    <p class="card-title"></p>
+                                                    <div class="canvas-wrapper">
+                                                        <canvas class="chart" id="piechart10"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card-header">Lupon Records Graphs</div>
+                                                <div class="card-body">
+                                                    <p class="card-title"></p>
+                                                    <div class="canvas-wrapper">
+                                                        <canvas class="chart" id="piechart11"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card-header">Kagawad Report Graphs</div>
+                                                <div class="card-body">
+                                                    <p class="card-title"></p>
+                                                    <div class="canvas-wrapper">
+                                                        <canvas class="chart" id="piechart12"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card-header">Tanod Report Graphs</div>
+                                                <div class="card-body">
+                                                    <p class="card-title"></p>
+                                                    <div class="canvas-wrapper">
+                                                        <canvas class="chart" id="piechart13"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header font-weight-bold">
+                                           <a class="btn btn-outline-primary float-right" ><i class="fas fa-file"></i>&nbsp; Print Reports</a>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b></b></th>
+                                                    <th><p class="btn-warning text-white mt-3">Pending Cases</p></th>
+                                                    <th><p class="btn-info text-white mt-3">Ongoing Cases</p></th>
+                                                    <th><p class="btn-success text-white mt-3">Finished Cases</p></th>
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td> Blotter Records </td>
+                                                    <td> 5 </td>
+                                                    <td> 8 </td>
+                                                    <td> 10 </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td> Lupon Records </td>
+                                                    <td> 10 </td>
+                                                    <td> 9 </td>
+                                                    <td> 20 </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b></b></th>
+                                                    <th><p class="btn-warning text-white mt-3">Pending Reports</p></th>
+                                                    <th><p class="btn-success text-white mt-3">Finished Reports</p></th>
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td> Kagawad Records </td>
+                                                    <td> 45 </td>
+                                                    <td> 105 </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td> Tanod Records </td>
+                                                    <td> 20 </td>
+                                                    <td> 120 </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
                                                   </tr>
                                                 </tbody>
                                             </table>
@@ -806,6 +925,8 @@
     <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
     <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/vendor/chartsjs/Chart.min.js"></script>
+    <script src="assets/js/chartblotter.js"></script>
     <script src="assets/vendor/DataTables/datatables.min.js"></script>
     <script src="assets/js/initiate-datatables.js"></script>
 </body>
