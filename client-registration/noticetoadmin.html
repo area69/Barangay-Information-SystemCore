@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notice to Admin | Barangay Information System</title>
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/flagiconcss3/css/flag-icon.min.css" rel="stylesheet">
+    <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <a href="dashboard.html"><img src="assets/images/Barangay-info-logo.png" alt="bootraper logo" class="app-logo"></a>
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="family-registration.html"><i class="fas fa-user"></i> Family</a>
+                </li>
+                <li>
+                    <a href="request-docu.html"><i class="fas fa-file"></i> Request Documents</a>
+                </li>
+                <li>
+                    <a href="noticetoadmin.html" class="active"><i class="fas fa-envelope-open-text"></i> Notice to Admin</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary default-secondary-menu"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown mr-1">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-bell"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>&nbsp;Juan Dela Cruz</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="profile.html" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="../website/index.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+         
+            <div class="content">
+                <div class="container-fluid">
+                    <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active font-weight-bold" data-toggle="pill" href="#pills-blotter" role="tab">Report about Blotter</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link font-weight-bold" data-toggle="pill" href="#pills-health" role="tab">Report about Health </a>    
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-blotter" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row mt-3">
+                                                <div class="col-md-3">
+                                                    <label><b>Complainant</b></label>
+                                                    <select class="form-control">
+                                                        <option>-- Select Complainant --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Address</b></label>
+                                                    <input type="text"  placeholder="Complainant Address" class="form-control">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Age</b></label>
+                                                    <input type="text"  placeholder="Complainant Age" class="form-control">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Contact Number</b></label>
+                                                    <input type="text"  placeholder="Complainant Contact Numer" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-3">
+                                                    <label><b>Complainee</b></label>
+                                                    <select class="form-control">
+                                                        <option>-- Select Complainee --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Address</b></label>
+                                                    <input type="text"  placeholder="Complainee Address" class="form-control">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Age</b></label>
+                                                    <input type="text"  placeholder="Complainee Age" class="form-control">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Contact Number</b></label>
+                                                    <input type="text"  placeholder="Complainee Contact Numer" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label><b>Complaint</b></label>
+                                                    <input type="text"  placeholder="Complaint" class="form-control">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label><b>Incident Type</b></label>
+                                                    <select class="form-control">
+                                                        <option>Violence</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label><b>Status</b></label>
+                                                    <select class="form-control">
+                                                        <option>Solved</option>
+                                                        <option>Settled</option>
+                                                        <option>Ongoing</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label><b>Incidence</b></label>
+                                                    <input type="text"  placeholder="Location of Incidence" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-3">
+                                                    <label><b>Date Recorded</b></label>
+                                                    <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Time Recorded</b></label>
+                                                    <input type="text"  placeholder="" class="form-control">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Incident Date</b></label>
+                                                    <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label><b>Incident Time</b></label>
+                                                    <input type="text"  placeholder="" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-10"></div>
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-success form-control"><b>Save</b></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>                   
+                            </div>        
+                        </div>
+                        <div class="tab-pane fade show" id="pills-health" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row mt-3">
+                                                <div class="col-md-3">
+                                                    <label><b>Name (Affected Individual)</b></label>
+                                                    <input type="text"  placeholder="" class="form-control text-center">
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label><b>Site/Location of Event</b></label>
+                                                    <input type="text"  placeholder="" class="form-control text-center">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label><b>Date</b></label>
+                                                    <input type="text"  placeholder="" class="form-control text-center">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label><b>Time</b></label>
+                                                    <input type="text"  placeholder="" class="form-control text-center">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-3">   
+                                                    <label><b>Hospitalization Type</b></label>
+                                                    <select class="form-control">
+                                                        <option>Normal Admission</option>
+                                                        <option>Emergency Admission</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">   
+                                                    <label><b>Name of Other Persons Involved</b></label>
+                                                    <input type="text"  placeholder="" class="form-control text-center">
+                                                </div>
+                                                <div class="col-md-6">   
+                                                    <label><b>Name and Phone Number (Person Filling out Report)</b></label>
+                                                    <input type="text"  placeholder="" class="form-control text-center">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-6">   
+                                                    <label><b>Health Report Description</b></label>
+                                                    <input type="text"  placeholder="" class="form-control text-center">
+                                                </div>
+                                                <div class="col-md-3">   
+                                                    <label><b>Root Cause</b></label>
+                                                    <input type="text"  placeholder="" class="form-control text-center">
+                                                </div>
+                                                <div class="col-md-3">   
+                                                    <label><b>Health Type Level</b></label>
+                                                    <select class="form-control">
+                                                        <option class="btn-info">Lower Risk</option>
+                                                        <option class="btn-warning">Medium Risk</option>
+                                                        <option class="btn-danger">High Risk</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-12">
+                                                    <label><b>Witnesses</b></label>
+                                                    <textarea class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-10"></div>
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-success form-control"><b>Save</b></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>                   
+                            </div>    
+                        </div>
+                      </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/form-validator.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
