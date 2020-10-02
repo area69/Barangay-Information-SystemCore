@@ -12,7 +12,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
 </head>
-
+<style>
+    #regForm {
+      background-color: #ffffff;
+    }
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+    button {
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-family: Raleway;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    #prevBtn {
+      background-color: #bbbbbb;
+    }
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbbbbb;
+      border: none;  
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+    .step.active {
+      opacity: 1;
+    }
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #4CAF50;
+    }
+</style>
 <body>
     <div class="wrapper">
         <nav id="sidebar" class="active">
@@ -249,18 +290,421 @@
                                 </div>                   
                             </div>    
                         </div>
-                        <div class="tab-pane fade show" id="pills-hsurvey" role="tabpanel">
+                        <div class="tab-pane fade show" id="pills-hsurvey" role="tabpanel"> 
                             <div class="row mt-3">
                                 <div class="col-md-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            
-                                            <div class="row mt-3">
-                                                <div class="col-md-10"></div>
-                                                <div class="col-md-2">
-                                                    <button type="button" class="btn btn-success form-control"><b>Save</b></button>
+                                            <form id="regForm" action="">
+                                                <div class="tab">
+                                                    <table class="table table-bordered" width="100%">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td><h5>Are you experiencing: Sore Throat?</h5><small>Nakakaranas ka ba ng pananakit ng lalamunan/ masakit lumunok?</small></td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                        <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                    </div> 
+                                                                </b>
+                                                            </td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                        <label class="custom-control-label" for="customCheck4">No</label>
+                                                                    </div>
+                                                                </b>    
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><h5>Are you experiencing: Fever for the pass few days?</h5><small>Nakakaranas ka ba ng lagnat sa nakalipas na mga araw?</small></td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                        <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                    </div> 
+                                                                </b>
+                                                            </td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                        <label class="custom-control-label" for="customCheck4">No</label>
+                                                                    </div>
+                                                                </b>    
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><h5>Are you experiencing: Body Pains?</h5><small>Nakakaranas ka ba ng pananakit ng katawan?</small></td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                        <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                    </div> 
+                                                                </b>
+                                                            </td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                        <label class="custom-control-label" for="customCheck4">No</label>
+                                                                    </div>
+                                                                </b>    
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><h5>Are you experiencing: Headache?</h5><small>Nakakaranas ka ba ng pananakit ng ulo?</small></td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                        <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                    </div> 
+                                                                </b>
+                                                            </td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                        <label class="custom-control-label" for="customCheck4">No</label>
+                                                                    </div>
+                                                                </b>    
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><h5>Are you experiencing: Colds?</h5><small>Nakakaranas ka ba ng sipon?</small></td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                        <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                    </div> 
+                                                                </b>
+                                                            </td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                        <label class="custom-control-label" for="customCheck4">No</label>
+                                                                    </div>
+                                                                </b>    
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><h5>Are you experiencing: Eye discharge?</h5><small>Nakakaranas ka ba ng lagnat sa nakalipas na mga araw?</small></td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                        <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                    </div> 
+                                                                </b>
+                                                            </td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                        <label class="custom-control-label" for="customCheck4">No</label>
+                                                                    </div>
+                                                                </b>    
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><h5>Are you experiencing: New loss of smell and/or taste?</h5><small>Nakakaranas ka ba ng pagkawala ng pang-amoy o panlasa?</small></td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                        <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                    </div> 
+                                                                </b>
+                                                            </td>
+                                                            <td> 
+                                                                <b>
+                                                                    <div class="custom-control custom-checkbox text-center">
+                                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                        <label class="custom-control-label" for="customCheck4">No</label>
+                                                                    </div>
+                                                                </b>    
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
-                                            </div>
+                                                <div class="tab">
+                                                    <table class="table table-bordered" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><h5>Are you experiencing: Skin rash or discoloration of toes/fingers?</h5><small>Nakakaranas ka ba ng pag-pantal sa balat o pag-iba ng kulay sa mga daliri sa kamay o paa?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><h5>Are you experiencing: Cough?</h5><small>Nakakaranas ka ba ng pag-ubo?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><h5>Are you experiencing: Have you been recently tested for Covid19?</h5><small>Ikaw ba ay kamakailan lamang nagpa-test sa Covid19?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><h5>Are you experiencing: Diarrhea?</h5><small>Nakakaranas ka ba ng pagtatae?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><h5>Have you been evaluated as a Probable or Suspected for Covid19?</h5><small>Ikaw ba ay isinuring Propable or Suspected na may Covid19?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><h5>Have you worked together or stayed in the same close environment of a confirmed Covid19 case?</h5><small>May nakasama ka ba o nakatrabahong tao na kumpirmadong may Covid19/ may impeksyon ng coronavirus?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                              </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="tab">
+                                                    <table class="table table-bordered" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><h5>Have you had any contact with anyone with fever,cough,colds, and sore throat in the past 2 weeks?</h5><small>Mayroon ka bang nakasama na may lagnat, ubo, sipon o sakit ng lalamunan sa nakalipas ng dalawang linggo?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><h5>Have you traveled to any area in your region aside from your home?</h5><small>Ikaw ba ay nagpunta sa iba pang parte ng iyong rehiyon bukod sa iyong bahay?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><h5>Have you traveled outside of the Philippines in the last 14 days?</h5><small>Ikaw ba ay nagbyahe sa labas ng Pilipinas sa nakalipas 14 na araw?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><h5>Have you been out of the office for more than 6 days?</h5><small>Ikaw ba ay hindi pumunta sa opisina sa nakaraang anim na araw?</small></td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                            <label class="custom-control-label" for="customCheck3">Yes</label>
+                                                                        </div> 
+                                                                    </b>
+                                                                </td>
+                                                                <td> 
+                                                                    <b>
+                                                                        <div class="custom-control custom-checkbox text-center">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                            <label class="custom-control-label" for="customCheck4">No</label>
+                                                                        </div>
+                                                                    </b>    
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div style="overflow:auto;">
+                                                  <div style="float:right;">
+                                                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                                  </div>
+                                                </div>
+                                                <!-- Circles which indicates the steps of the form: -->
+                                                <div style="text-align:center;margin-top:40px;">
+                                                  <span class="step"></span>
+                                                  <span class="step"></span>
+                                                  <span class="step"></span>
+                                                </div>
+                                            </form>
+                                            <script>
+                                                var currentTab = 0; // Current tab is set to be the first tab (0)
+                                                showTab(currentTab); // Display the current tab
+                                                
+                                                function showTab(n) {
+                                                  // This function will display the specified tab of the form...
+                                                  var x = document.getElementsByClassName("tab");
+                                                  x[n].style.display = "block";
+                                                  //... and fix the Previous/Next buttons:
+                                                  if (n == 0) {
+                                                    document.getElementById("prevBtn").style.display = "none";
+                                                  } else {
+                                                    document.getElementById("prevBtn").style.display = "inline";
+                                                  }
+                                                  if (n == (x.length - 1)) {
+                                                    document.getElementById("nextBtn").innerHTML = "Submit";
+                                                  } else {
+                                                    document.getElementById("nextBtn").innerHTML = "Next";
+                                                  }
+                                                }
+                                                
+                                                function nextPrev(n) {
+                                                  // This function will figure out which tab to display
+                                                  var x = document.getElementsByClassName("tab");
+                                                  // Exit the function if any field in the current tab is invalid:
+                                                  if (n == 1 && !validateForm()) return false;
+                                                  // Hide the current tab:
+                                                  x[currentTab].style.display = "none";
+                                                  // Increase or decrease the current tab by 1:
+                                                  currentTab = currentTab + n;
+                                                  // if you have reached the end of the form...
+                                                  // Otherwise, display the correct tab:
+                                                  showTab(currentTab);
+                                                }
+                                                
+                                                function validateForm() {
+                                                  // This function deals with validation of the form fields
+                                                  var x, y, i, valid = true;
+                                                  // If the valid status is true, mark the step as finished and valid:
+                                                  if (valid) {
+                                                    document.getElementsByClassName("step")[currentTab].className += " finish";
+                                                  }
+                                                  return valid; // return the valid status
+                                                }
+                                                
+                                                function fixStepIndicator(n) {
+                                                  // This function removes the "active" class of all steps...
+                                                  var i, x = document.getElementsByClassName("step");
+                                                  for (i = 0; i < x.length; i++) {
+                                                    x[i].className = x[i].className.replace(" active", "");
+                                                  }
+                                                  //... and adds the "active" class on the current step:
+                                                  x[n].className += " active";
+                                                }
+                                            </script>
                                         </div>
                                     </div>  
                                 </div>                   
