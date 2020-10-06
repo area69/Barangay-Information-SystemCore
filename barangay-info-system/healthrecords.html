@@ -83,379 +83,453 @@
                           <li class="nav-item">
                               <a class="nav-link" data-toggle="pill" href="#pills-emergency" role="tab">Emergency Reports</a> 
                           </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#pills-healthworker" role="tab">Health Worker Reports</a> 
+                        </li>
                     </ul>
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-health" role="tabpanel">
-                                <div class="row mt-3">
-                                    <div class="col-md-12 col-lg-12">
-                                        <div class="card">
-                                            <div class="card-header font-weight-bold">
-                                               <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i>&nbsp; Add Health Reports</a>
-                                            </div>
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-xl" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <p class="modal-title font-weight-bold" id="exampleModalLabel">Health Report Form</p>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body text-left">
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-3">
-                                                                    <label><b>Name (Affected Individual)</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <label><b>Site/Location of Event</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <label><b>Date</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <label><b>Time</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-health" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header font-weight-bold">
+                                           <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i>&nbsp; Add Health Reports</a>
+                                        </div>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold" id="exampleModalLabel">Health Report Form</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Name (Affected Individual)</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
                                                             </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Name of Other Persons Involved</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Name and Phone Number (Person Filling out Report)</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
+                                                            <div class="col-md-5">
+                                                                <label><b>Site/Location of Event</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
                                                             </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Health Report Description</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-3">   
-                                                                    <label><b>Root Cause</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-3">   
-                                                                    <label><b>Health Type Level</b></label>
-                                                                    <select class="form-control">
-                                                                        <option class="btn-info">Lower Risk</option>
-                                                                        <option class="btn-warning">Medium Risk</option>
-                                                                        <option class="btn-danger">High Risk</option>
-                                                                    </select>
-                                                                </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Date</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
                                                             </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-12">
-                                                                    <label><b>Witnesses</b></label>
-                                                                    <textarea class="form-control"></textarea>
-                                                                </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Time</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
                                                             </div>
                                                         </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-success"><b>Approve</b></button>
-                                                            <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">   
+                                                                <label><b>Name of Other Persons Involved</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-6">   
+                                                                <label><b>Name and Phone Number (Person Filling out Report)</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">   
+                                                                <label><b>Health Report Description</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">   
+                                                                <label><b>Root Cause</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">   
+                                                                <label><b>Health Type Level</b></label>
+                                                                <select class="form-control">
+                                                                    <option class="btn-info">Lower Risk</option>
+                                                                    <option class="btn-warning">Medium Risk</option>
+                                                                    <option class="btn-danger">High Risk</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Witnesses</b></label>
+                                                                <textarea class="form-control"></textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
-                                                <div class="modal-dialog modal-xl" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <p class="modal-title font-weight-bold">View Health Records</p>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body text-left">
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-3">
-                                                                    <label><b>Name (Affected Individual)</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <label><b>Site/Location of Event</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <label><b>Date</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <label><b>Time</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Name of Other Persons Involved</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Name and Phone Number (Person Filling out Report)</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Health Report Description</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-3">   
-                                                                    <label><b>Root Cause</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-3">   
-                                                                    <label><b>Health Type Level</b></label>
-                                                                    <select class="form-control">
-                                                                        <option class="btn-info">Lower Risk</option>
-                                                                        <option class="btn-warning">Medium Risk</option>
-                                                                        <option class="btn-danger">High Risk</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-12">
-                                                                    <label><b>Witnesses</b></label>
-                                                                    <textarea class="form-control"></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-success"><b>Save</b></button>
-                                                        </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Approve</b></button>
+                                                        <button type="button" class="btn btn-danger"><b>Reject</b></button>
                                                     </div>
                                                 </div>
-                                            </div>
-            
-                                            <div class="card-body">
-                                                <p class="card-title"></p>
-                                                <table class="table table-hover table-bordered dataTables-example" width="100%">
-                                                    <thead class="text-center">
-                                                      <tr>
-                                                        <th><b>Status</b></th>
-                                                        <th><b>Name</b></th>
-                                                        <th><b>Health Report</b></th>
-                                                        <th><b>Health Type Level</b></th>
-                                                        <th><b>Date Recorded</b></th>   
-                                                        <th><b>Actions</b></th>
-                                                      </tr>
-                                                    </thead>
-                                                    <tbody class="text-center">
-                                                      <tr>
-                                                        <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
-                                                        <td> John S. Doe </td>
-                                                        <td> Possible detected symptoms of ncov </td>
-                                                        <td class="btn-warning text-white mt-3"> Medium Risk </td>
-                                                        <td> 9/20/2020 </td>
-                                                        <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td><p class="btn-success text-white mt-3">Done</p></td>
-                                                        <td> Juan S. Reyes </td>
-                                                        <td> Possible Respiratory Infection</td>
-                                                        <td class="btn-danger text-white mt-3"> High Risk </td>
-                                                        <td> 9/20/2020 </td>
-                                                        <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
-                                                      </tr>
-                                                    </tbody>
-                                                </table>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-emergency" role="tabpanel">
-                                <div class="row mt-3">
-                                    <div class="col-md-12 col-lg-12">
-                                        <div class="card">
-                                            <div class="card-header font-weight-bold">
-                                               <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModalEmergency"><i class="fas fa-user-plus"></i>&nbsp; Add Emergency Reports</a>
-                                            </div>
-                                            <div class="modal fade" id="exampleModalEmergency" tabindex="-1" role="dialog" aria-labelledby="exampleModalemergency2" aria-hidden="true">
-                                                <div class="modal-dialog modal-xl" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <p class="modal-title font-weight-bold" id="exampleModalLabel">Emergency Report Form</p>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body text-left">
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-3">
-                                                                    <label><b>Name (Affected Individual)</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <label><b>Site/Location of Event</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <label><b>Date</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <label><b>Time</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
+                                        
+                                        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold">View Health Records</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Name (Affected Individual)</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
                                                             </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Name of Other Persons Involved</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Name and Phone Number (Person Filling out Report)</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
+                                                            <div class="col-md-5">
+                                                                <label><b>Site/Location of Event</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
                                                             </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Health Report Description</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-3">   
-                                                                    <label><b>Root Cause</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-3">   
-                                                                    <label><b>Health Type Level</b></label>
-                                                                    <select class="form-control">
-                                                                        <option class="btn-info">Lower Risk</option>
-                                                                        <option class="btn-warning">Medium Risk</option>
-                                                                        <option class="btn-danger">High Risk</option>
-                                                                    </select>
-                                                                </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Date</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
                                                             </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-12">
-                                                                    <label><b>Witnesses</b></label>
-                                                                    <textarea class="form-control"></textarea>
-                                                                </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Time</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
                                                             </div>
                                                         </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-success"><b>Approve</b></button>
-                                                            <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">   
+                                                                <label><b>Name of Other Persons Involved</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-6">   
+                                                                <label><b>Name and Phone Number (Person Filling out Report)</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
                                                         </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">   
+                                                                <label><b>Health Report Description</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">   
+                                                                <label><b>Root Cause</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">   
+                                                                <label><b>Health Type Level</b></label>
+                                                                <select class="form-control">
+                                                                    <option class="btn-info">Lower Risk</option>
+                                                                    <option class="btn-warning">Medium Risk</option>
+                                                                    <option class="btn-danger">High Risk</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Witnesses</b></label>
+                                                                <textarea class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Save</b></button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            <div class="modal fade" id="exampleModalemergency2" tabindex="-1" role="dialog" aria-hidden="true">
-                                                <div class="modal-dialog modal-xl" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <p class="modal-title font-weight-bold">View Emergency Records</p>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body text-left">
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-3">
-                                                                    <label><b>Name (Affected Individual)</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <label><b>Site/Location of Event</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <label><b>Date</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <label><b>Time</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Name of Other Persons Involved</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Name and Phone Number (Person Filling out Report)</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">   
-                                                                    <label><b>Health Report Description</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-3">   
-                                                                    <label><b>Root Cause</b></label>
-                                                                    <input type="text"  placeholder="" class="form-control text-center">
-                                                                </div>
-                                                                <div class="col-md-3">   
-                                                                    <label><b>Health Type Level</b></label>
-                                                                    <select class="form-control">
-                                                                        <option class="btn-info">Lower Risk</option>
-                                                                        <option class="btn-warning">Medium Risk</option>
-                                                                        <option class="btn-danger">High Risk</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-12">
-                                                                    <label><b>Witnesses</b></label>
-                                                                    <textarea class="form-control"></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-success"><b>Save</b></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                            <div class="card-body">
-                                                <p class="card-title"></p>
-                                                <table class="table table-hover table-bordered dataTables-example" width="100%">
-                                                    <thead class="text-center">
-                                                      <tr>
-                                                        <th><b>Status</b></th>
-                                                        <th><b>Name</b></th>
-                                                        <th><b>Health Report</b></th>
-                                                        <th><b>Health Type Level</b></th>
-                                                        <th><b>Date Recorded</b></th>   
-                                                        <th><b>Actions</b></th>
-                                                      </tr>
-                                                    </thead>
-                                                    <tbody class="text-center">
-                                                      <tr>
-                                                        <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
-                                                        <td> John S. Doe </td>
-                                                        <td> Possible detected symptoms of ncov </td>
-                                                        <td class="btn-warning text-white mt-3"> Medium Risk </td>
-                                                        <td> 9/20/2020 </td>
-                                                        <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalemergency2">View</button></td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td><p class="btn-success text-white mt-3">Done</p></td>
-                                                        <td> Juan S. Reyes </td>
-                                                        <td> Possible Respiratory Infection</td>
-                                                        <td class="btn-danger text-white mt-3"> High Risk </td>
-                                                        <td> 9/20/2020 </td>
-                                                        <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalemergency2">View</button></td>
-                                                      </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                        </div>
+        
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b>Status</b></th>
+                                                    <th><b>Name</b></th>
+                                                    <th><b>Health Report</b></th>
+                                                    <th><b>Health Type Level</b></th>
+                                                    <th><b>Date Recorded</b></th>   
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                    <td> John S. Doe </td>
+                                                    <td> Possible detected symptoms of ncov </td>
+                                                    <td class="btn-warning text-white mt-3"> Medium Risk </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td><p class="btn-success text-white mt-3">Done</p></td>
+                                                    <td> Juan S. Reyes </td>
+                                                    <td> Possible Respiratory Infection</td>
+                                                    <td class="btn-danger text-white mt-3"> High Risk </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="pills-emergency" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header font-weight-bold">
+                                           <a class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#exampleModalEmergency"><i class="fas fa-user-plus"></i>&nbsp; Add Emergency Reports</a>
+                                        </div>
+                                        <div class="modal fade" id="exampleModalEmergency" tabindex="-1" role="dialog" aria-labelledby="exampleModalemergency2" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold" id="exampleModalLabel">Emergency Report Form</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Name (Affected Individual)</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-5">
+                                                                <label><b>Site/Location of Event</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Date</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Time</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">   
+                                                                <label><b>Name of Other Persons Involved</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-6">   
+                                                                <label><b>Name and Phone Number (Person Filling out Report)</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">   
+                                                                <label><b>Health Report Description</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">   
+                                                                <label><b>Root Cause</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">   
+                                                                <label><b>Health Type Level</b></label>
+                                                                <select class="form-control">
+                                                                    <option class="btn-info">Lower Risk</option>
+                                                                    <option class="btn-warning">Medium Risk</option>
+                                                                    <option class="btn-danger">High Risk</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Witnesses</b></label>
+                                                                <textarea class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Approve</b></button>
+                                                        <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="modal fade" id="exampleModalemergency2" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold">View Emergency Records</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-3">
+                                                                <label><b>Name (Affected Individual)</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-5">
+                                                                <label><b>Site/Location of Event</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Date</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label><b>Time</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">   
+                                                                <label><b>Name of Other Persons Involved</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-6">   
+                                                                <label><b>Name and Phone Number (Person Filling out Report)</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">   
+                                                                <label><b>Health Report Description</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">   
+                                                                <label><b>Root Cause</b></label>
+                                                                <input type="text"  placeholder="" class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">   
+                                                                <label><b>Health Type Level</b></label>
+                                                                <select class="form-control">
+                                                                    <option class="btn-info">Lower Risk</option>
+                                                                    <option class="btn-warning">Medium Risk</option>
+                                                                    <option class="btn-danger">High Risk</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Witnesses</b></label>
+                                                                <textarea class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Save</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b>Status</b></th>
+                                                    <th><b>Name</b></th>
+                                                    <th><b>Health Report</b></th>
+                                                    <th><b>Health Type Level</b></th>
+                                                    <th><b>Date Recorded</b></th>   
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                    <td> John S. Doe </td>
+                                                    <td> Possible detected symptoms of ncov </td>
+                                                    <td class="btn-warning text-white mt-3"> Medium Risk </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalemergency2">View</button></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td><p class="btn-success text-white mt-3">Done</p></td>
+                                                    <td> Juan S. Reyes </td>
+                                                    <td> Possible Respiratory Infection</td>
+                                                    <td class="btn-danger text-white mt-3"> High Risk </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalemergency2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-healthworker" role="tabpanel">
+                            <div class="row mt-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="modal fade" id="exampleModalKR2" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title font-weight-bold">View Health Worker Records</p>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-4">
+                                                                <label><b>Health Worker</b></label>
+                                                                <input type="text"  placeholder="Juan Dela Cruz" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="9/25/2020" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="8:50 PM" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <label><b>Reports</b></label>
+                                                                <textarea type="text" class="form-control"> </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success"><b>Approved</b></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card-body">
+                                            <p class="card-title"></p>
+                                            <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                                <thead class="text-center">
+                                                  <tr>
+                                                    <th><b>Status</b></th>
+                                                    <th><b>Health Worker</b></th>
+                                                    <th><b>Date Recorded</b></th>
+                                                    <th><b>Time Recorded</b></th>
+                                                    <th><b>Reports</b></th>
+                                                    <th><b>Actions</b></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                  <tr>
+                                                    <td><p class="btn-warning text-white mt-3">Pending</p></td>
+                                                    <td> John S. Doe </td>
+                                                    <td> 9/20/2020 </td>
+                                                    <td> 12:20 PM </td>
+                                                    <td> Sample Report </td>
+                                                    <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalKR2">View</button></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

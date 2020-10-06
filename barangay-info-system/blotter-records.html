@@ -94,9 +94,24 @@
                               <a class="nav-link" data-toggle="pill" href="#pills-statistic" role="tab">Statistical Reports</a>
                             </li>
                     </ul>
-                      <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-blotter" role="tabpanel">
-                            <div class="row mt-3">
+                            
+            <div class="content">
+                <div class="container-fluid">
+                        <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#pills-pending" role="tab">Pending Documents</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#pills-approved" role="tab">Approved Documents</a>  </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  data-toggle="pill" href="#pills-rejected" role="tab">Rejected Documents</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-pending" role="tabpanel">
+                            <div class="row">
                                 <div class="col-md-12 col-lg-12">
                                     <div class="card">
                                         <div class="card-header font-weight-bold">
@@ -116,54 +131,60 @@
                                                             <div class="col-md-3">
                                                                 <label><b>Complainant</b></label>
                                                                 <select class="form-control">
-                                                                    <option>-- Select Complainant --</option>
+                                                                    <option>Albert Nicolas</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Address</b></label>
-                                                                <input type="text"  placeholder="Complainant Address" class="form-control">
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Age</b></label>
-                                                                <input type="text"  placeholder="Complainant Age" class="form-control">
+                                                                <input type="text"  placeholder="26" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Contact Number</b></label>
-                                                                <input type="text"  placeholder="Complainant Contact Numer" class="form-control">
+                                                                <input type="text"  placeholder="09876543210" disabled class="form-control text-center">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
-                                                                <label><b>Complainee</b></label>
+                                                                <label><b>Respondent</b></label>
                                                                 <select class="form-control">
-                                                                    <option>-- Select Complainee --</option>
+                                                                    <option>Juanito Reyes</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Address</b></label>
-                                                                <input type="text"  placeholder="Complainee Address" class="form-control">
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Age</b></label>
-                                                                <input type="text"  placeholder="Complainee Age" class="form-control">
+                                                                <input type="text"  placeholder="26" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Contact Number</b></label>
-                                                                <input type="text"  placeholder="Complainee Contact Numer" class="form-control">
+                                                                <input type="text"  placeholder="09876543210" disabled class="form-control text-center">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-3">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-12">
                                                                 <label><b>Complaint</b></label>
-                                                                <input type="text"  placeholder="Complaint" class="form-control">
+                                                                <textarea type="text"  placeholder="Complaint" class="form-control"></textarea>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">
+                                                                <label><b>Incidence</b></label>
+                                                                <input type="text"  placeholder="Location of Incidence" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
                                                                 <label><b>Incident Type</b></label>
                                                                 <select class="form-control">
                                                                     <option>Violence</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-3">
                                                                 <label><b>Status</b></label>
                                                                 <select class="form-control">
                                                                     <option>Solved</option>
@@ -171,10 +192,7 @@
                                                                     <option>Ongoing</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="col-md-4">
-                                                                <label><b>Incidence</b></label>
-                                                                <input type="text"  placeholder="Location of Incidence" class="form-control">
-                                                            </div>
+                                                           
                                                         </div>
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
@@ -217,82 +235,85 @@
                                                             <div class="col-md-3">
                                                                 <label><b>Complainant</b></label>
                                                                 <select class="form-control">
-                                                                    <option>-- Select Complainant --</option>
+                                                                    <option>Albert Nicolas</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Address</b></label>
-                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Age</b></label>
-                                                                <input type="text"  placeholder="30" class="form-control">
+                                                                <input type="text"  placeholder="26" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Contact Number</b></label>
-                                                                <input type="text"  placeholder="09123456789" class="form-control">
+                                                                <input type="text"  placeholder="09876543210" disabled class="form-control text-center">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
-                                                                <label><b>Complainee</b></label>
+                                                                <label><b>Respondent</b></label>
                                                                 <select class="form-control">
-                                                                    <option>-- Select Complainee --</option>
+                                                                    <option>Juanito Reyes</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Address</b></label>
-                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Age</b></label>
-                                                                <input type="text"  placeholder="29" class="form-control">
+                                                                <input type="text"  placeholder="26" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Contact Number</b></label>
-                                                                <input type="text"  placeholder="0987654321" class="form-control">
+                                                                <input type="text"  placeholder="09876543210" disabled class="form-control text-center">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-3">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-12">
                                                                 <label><b>Complaint</b></label>
-                                                                <input type="text"  placeholder="Physical Injuries and Alarming Scandal" class="form-control">
+                                                                <textarea type="text"  placeholder="Complaint" class="form-control"></textarea>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">
+                                                                <label><b>Incidence</b></label>
+                                                                <input type="text"  placeholder="Location of Incidence" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
                                                                 <label><b>Incident Type</b></label>
                                                                 <select class="form-control">
                                                                     <option>Violence</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-3">
                                                                 <label><b>Status</b></label>
                                                                 <select class="form-control">
-                                                                    <option>Ongoing</option>
                                                                     <option>Solved</option>
                                                                     <option>Settled</option>
+                                                                    <option>Ongoing</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="col-md-4">
-                                                                <label><b>Incidence</b></label>
-                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
-                                                            </div>
+                                                           
                                                         </div>
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
                                                                 <label><b>Date Recorded</b></label>
-                                                                <input type="text"  placeholder="9/20/2020" class="form-control">
+                                                                <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Time Recorded</b></label>
-                                                                <input type="text"  placeholder="12:30 PM" class="form-control">
+                                                                <input type="text"  placeholder="" class="form-control">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Incident Date</b></label>
-                                                                <input type="text"  placeholder="9/20/2020" class="form-control">
+                                                                <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Incident Time</b></label>
-                                                                <input type="text"  placeholder="10:30 AM" class="form-control">
+                                                                <input type="text"  placeholder="" class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -335,6 +356,16 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-approved" role="tabpanel">
+                             
+                            </div>
+                            <div class="tab-pane fade" id="pills-rejected" role="tabpanel">
+                            
+                            </div>
+                        </div>
+                </div>
+            </div>
                         </div>
                         <div class="tab-pane fade" id="pills-lupon" role="tabpanel">
                             <div class="row mt-3">
@@ -357,54 +388,60 @@
                                                             <div class="col-md-3">
                                                                 <label><b>Complainant</b></label>
                                                                 <select class="form-control">
-                                                                    <option>-- Select Complainant --</option>
+                                                                    <option>Albert Nicolas</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Address</b></label>
-                                                                <input type="text"  placeholder="Complainant Address" class="form-control">
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Age</b></label>
-                                                                <input type="text"  placeholder="Complainant Age" class="form-control">
+                                                                <input type="text"  placeholder="26" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Contact Number</b></label>
-                                                                <input type="text"  placeholder="Complainant Contact Numer" class="form-control">
+                                                                <input type="text"  placeholder="09876543210" disabled class="form-control text-center">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
-                                                                <label><b>Complainee</b></label>
+                                                                <label><b>Respondent</b></label>
                                                                 <select class="form-control">
-                                                                    <option>-- Select Complainee --</option>
+                                                                    <option>Juanito Reyes</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Address</b></label>
-                                                                <input type="text"  placeholder="Complainee Address" class="form-control">
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Age</b></label>
-                                                                <input type="text"  placeholder="Complainee Age" class="form-control">
+                                                                <input type="text"  placeholder="26" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Contact Number</b></label>
-                                                                <input type="text"  placeholder="Complainee Contact Numer" class="form-control">
+                                                                <input type="text"  placeholder="09876543210" disabled class="form-control text-center">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-3">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-12">
                                                                 <label><b>Complaint</b></label>
-                                                                <input type="text"  placeholder="Complaint" class="form-control">
+                                                                <textarea type="text"  placeholder="Complaint" class="form-control"></textarea>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">
+                                                                <label><b>Incidence</b></label>
+                                                                <input type="text"  placeholder="Location of Incidence" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
                                                                 <label><b>Incident Type</b></label>
                                                                 <select class="form-control">
                                                                     <option>Violence</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-3">
                                                                 <label><b>Status</b></label>
                                                                 <select class="form-control">
                                                                     <option>Solved</option>
@@ -412,10 +449,7 @@
                                                                     <option>Ongoing</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="col-md-4">
-                                                                <label><b>Incidence</b></label>
-                                                                <input type="text"  placeholder="Location of Incidence" class="form-control">
-                                                            </div>
+                                                           
                                                         </div>
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
@@ -453,87 +487,91 @@
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
+                                                 
                                                     <div class="modal-body text-left">
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
                                                                 <label><b>Complainant</b></label>
                                                                 <select class="form-control">
-                                                                    <option>-- Select Complainant --</option>
+                                                                    <option>Albert Nicolas</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Address</b></label>
-                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Age</b></label>
-                                                                <input type="text"  placeholder="30" class="form-control">
+                                                                <input type="text"  placeholder="26" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Contact Number</b></label>
-                                                                <input type="text"  placeholder="09123456789" class="form-control">
+                                                                <input type="text"  placeholder="09876543210" disabled class="form-control text-center">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
-                                                                <label><b>Complainee</b></label>
+                                                                <label><b>Respondent</b></label>
                                                                 <select class="form-control">
-                                                                    <option>-- Select Complainee --</option>
+                                                                    <option>Juanito Reyes</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Address</b></label>
-                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                                <input type="text"  placeholder="Sta Cruz, Manila" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Age</b></label>
-                                                                <input type="text"  placeholder="29" class="form-control">
+                                                                <input type="text"  placeholder="26" disabled class="form-control text-center">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Contact Number</b></label>
-                                                                <input type="text"  placeholder="0987654321" class="form-control">
+                                                                <input type="text"  placeholder="09876543210" disabled class="form-control text-center">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-3">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-12">
                                                                 <label><b>Complaint</b></label>
-                                                                <input type="text"  placeholder="Physical Injuries and Alarming Scandal" class="form-control">
+                                                                <textarea type="text"  placeholder="Complaint" class="form-control"></textarea>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">
+                                                                <label><b>Incidence</b></label>
+                                                                <input type="text"  placeholder="Location of Incidence" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-3">
                                                                 <label><b>Incident Type</b></label>
                                                                 <select class="form-control">
                                                                     <option>Violence</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-3">
                                                                 <label><b>Status</b></label>
                                                                 <select class="form-control">
-                                                                    <option>Ongoing</option>
                                                                     <option>Solved</option>
                                                                     <option>Settled</option>
+                                                                    <option>Ongoing</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="col-md-4">
-                                                                <label><b>Incidence</b></label>
-                                                                <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
-                                                            </div>
+                                                           
                                                         </div>
                                                         <div class="row mt-3">
                                                             <div class="col-md-3">
                                                                 <label><b>Date Recorded</b></label>
-                                                                <input type="text"  placeholder="9/20/2020" class="form-control">
+                                                                <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Time Recorded</b></label>
-                                                                <input type="text"  placeholder="12:30 PM" class="form-control">
+                                                                <input type="text"  placeholder="" class="form-control">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Incident Date</b></label>
-                                                                <input type="text"  placeholder="9/20/2020" class="form-control">
+                                                                <input type="text"  placeholder="dd/mm/yyyy" class="form-control">
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label><b>Incident Time</b></label>
-                                                                <input type="text"  placeholder="10:30 AM" class="form-control">
+                                                                <input type="text"  placeholder="" class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -914,7 +952,7 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>

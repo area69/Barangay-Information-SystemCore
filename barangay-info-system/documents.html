@@ -73,74 +73,143 @@
                     </ul>
                 </div>
             </nav>
-
             <div class="content">
-                <div class="card-header bg-info text-white font-weight-bold">Documents Request</div>
                 <div class="container-fluid">
-                    <div class="row mt-3">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="card">
-                                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <p class="modal-title font-weight-bold" id="exampleModalLabel">Request Forms</p>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="d-flex justify-content-center">
-                                                    <div class="row">
-                                                        <label class="font-weight-bold ">Tracking ID</label>
-                                                        <div class="col-md-12 col-12 text-center border">
-                                                            <img src="../client-registration/assets/images/barangayclearanceqrcode.png" alt="">
-                                                            <h6>BCNB146Z150000001</h6>
-                                                        </div> 
+                        <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#pills-pending" role="tab">Pending Documents</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#pills-approved" role="tab">Approved Documents</a>  </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  data-toggle="pill" href="#pills-rejected" role="tab">Rejected Documents</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-pending" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12">
+                                        <div class="card">
+                                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <p class="modal-title font-weight-bold" id="exampleModalLabel">Request Forms</p>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="d-flex justify-content-center">
+                                                                <div class="row">
+                                                                    <label class="font-weight-bold ">Tracking ID</label>
+                                                                    <div class="col-md-12 col-12 text-center border">
+                                                                        <img src="../client-registration/assets/images/barangayclearanceqrcode.png" alt="">
+                                                                        <h6>BCNB146Z150000001</h6>
+                                                                    </div> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row mt-3">
+                                                                <div class="form-group col-md-4">
+                                                                    <label class="font-weight-bold">Name</label>
+                                                                    <input type="text" class="form-control text-center" placeholder="Albert Santos Nicolas" disabled>
+                                                                </div>
+                                                                <div class="form-group col-md-4">
+                                                                    <label class="font-weight-bold">Age</label>
+                                                                    <input type="text" class="form-control text-center" placeholder="22 Yeards Old" disabled>
+                                                                </div>
+                                                                <div class="form-group col-md-4">
+                                                                    <label class="font-weight-bold">Civil Status</label>
+                                                                    <input type="text" class="form-control text-center" placeholder="Single" disabled>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-4">
+                                                                    <label class="font-weight-bold">Date Requested</label>
+                                                                    <input type="text" class="form-control text-center" placeholder="9/25/2020" disabled>
+                                                                </div>
+                                                                <div class="form-group col-md-8">
+                                                                    <label class="font-weight-bold">Address</label>
+                                                                    <input type="text" class="form-control text-center" placeholder="142 Cabrera Street Barangay 136 Zone 15 Pasay City, Metro Manila" disabled>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-4">
+                                                                    <label class="font-weight-bold">Document Expiration</label>
+                                                                    <input type="text" class="form-control text-center" placeholder="3/25/2021" disabled>
+                                                                </div>
+                                                                <div class="form-group col-md-8">
+                                                                    <label class="font-weight-bold">Records</label>
+                                                                    <input type="text" class="form-control text-center" placeholder="Has no derogatory and/or criminal records filed" disabled>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-success"><a href="pdfbrgyclearance.html" target="_blank"><b>Approve</b></a></button>
+                                                            <button type="button" class="btn btn-danger"><b>Reject</b></button>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-row mt-3">
-                                                    <div class="form-group col-md-4">
-                                                        <label class="font-weight-bold">Name</label>
-                                                        <input type="text" class="form-control text-center" placeholder="Albert Santos Nicolas" disabled>
-                                                    </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label class="font-weight-bold">Age</label>
-                                                        <input type="text" class="form-control text-center" placeholder="22 Yeards Old" disabled>
-                                                    </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label class="font-weight-bold">Civil Status</label>
-                                                        <input type="text" class="form-control text-center" placeholder="Single" disabled>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-4">
-                                                        <label class="font-weight-bold">Date Requested</label>
-                                                        <input type="text" class="form-control text-center" placeholder="9/25/2020" disabled>
-                                                    </div>
-                                                    <div class="form-group col-md-8">
-                                                        <label class="font-weight-bold">Address</label>
-                                                        <input type="text" class="form-control text-center" placeholder="142 Cabrera Street Barangay 136 Zone 15 Pasay City, Metro Manila" disabled>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-4">
-                                                        <label class="font-weight-bold">Document Expiration</label>
-                                                        <input type="text" class="form-control text-center" placeholder="3/25/2021" disabled>
-                                                    </div>
-                                                    <div class="form-group col-md-8">
-                                                        <label class="font-weight-bold">Records</label>
-                                                        <input type="text" class="form-control text-center" placeholder="Has no derogatory and/or criminal records filed" disabled>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-success"><a href="pdfbrgyclearance.html" target="_blank"><b>Approve</b></a></button>
-                                                <button type="button" class="btn btn-danger"><b>Reject</b></button>
-                                            </div>
+                                            </div>          
+                                            <div class="card-body">
+                                                <p class="card-title"></p>
+                                                <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                                    <thead class="text-center">
+                                                    <tr>
+                                                        <th><b>Status</b></th>
+                                                        <th><b>Tracking ID</b></th>
+                                                        <th><b>Resident Name</b></th>
+                                                        <th><b>Address</b></th>
+                                                        <th><b>Purpose</b></th>
+                                                        <th><b>Date Requested</b></th>
+                                                        <th><b>Actions</b></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="text-center">
+                                                    <tr>
+                                                        <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                        <td> BCB146Z150000001 </td>
+                                                        <td> John S. Doe </td>
+                                                        <td> 142 Cabrera Street </td>
+                                                        <td> Education Requirement </td>
+                                                        <td> 9/25/2020 </td>
+                                                        <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                        <td> COIB146Z150000001 </td>
+                                                        <td> Albert S. Nicolas </td>
+                                                        <td> 142 Cabrera Street </td>
+                                                        <td> Occupation Requirement </td>
+                                                        <td> 9/25/2020 </td>
+                                                        <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                        <td> CORB146Z150000001 </td>
+                                                        <td> John N. Reyes </td>
+                                                        <td> 142 Cabrera Street </td>
+                                                        <td> Financial Requirement </td>
+                                                        <td> 9/25/2020 </td>
+                                                        <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                                        <td> RBIIB146Z150000001 </td>
+                                                        <td> Marlon R. Santos </td>
+                                                        <td> 142 Cabrera Street </td>
+                                                        <td> Education Assistance </td>
+                                                        <td> 9/25/2020 </td>
+                                                        <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>    
                                         </div>
+                                    </div>  
                                     </div>
-                                </div>          
+                            </div>
+                            <div class="tab-pane fade" id="pills-approved" role="tabpanel">
                                 <div class="card-body">
                                     <p class="card-title"></p>
                                     <table class="table table-hover table-bordered dataTables-example" width="100%">
@@ -152,53 +221,98 @@
                                             <th><b>Address</b></th>
                                             <th><b>Purpose</b></th>
                                             <th><b>Date Requested</b></th>
-                                            <th><b>Actions</b></th>
                                         </tr>
                                         </thead>
                                         <tbody class="text-center">
                                         <tr>
-                                            <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                            <td><p class="btn-success text-white mt-3">APPROVED</p></td>
                                             <td> BCB146Z150000001 </td>
                                             <td> John S. Doe </td>
                                             <td> 142 Cabrera Street </td>
                                             <td> Education Requirement </td>
                                             <td> 9/25/2020 </td>
-                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
-                                        </tr>
+                                          </tr>
                                         <tr>
-                                            <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                            <td><p class="btn-success text-white mt-3">APPROVED</p></td>
                                             <td> COIB146Z150000001 </td>
                                             <td> Albert S. Nicolas </td>
                                             <td> 142 Cabrera Street </td>
                                             <td> Occupation Requirement </td>
                                             <td> 9/25/2020 </td>
-                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
-                                        </tr>
+                                             </tr>
                                         <tr>
-                                            <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                            <td><p class="btn-success text-white mt-3">APPROVED</p></td>
                                             <td> CORB146Z150000001 </td>
                                             <td> John N. Reyes </td>
                                             <td> 142 Cabrera Street </td>
                                             <td> Financial Requirement </td>
                                             <td> 9/25/2020 </td>
-                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
-                                        </tr>
+                                          </tr>
                                         <tr>
-                                            <td><p class="btn-warning text-white mt-3">ONGOING</p></td>
+                                            <td><p class="btn-success text-white mt-3">APPROVED</p></td>
                                             <td> RBIIB146Z150000001 </td>
                                             <td> Marlon R. Santos </td>
                                             <td> 142 Cabrera Street </td>
                                             <td> Education Assistance </td>
                                             <td> 9/25/2020 </td>
-                                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
                                         </tr>
                                         </tbody>
                                     </table>
                                 </div>    
                             </div>
-                        </div>  
+                            <div class="tab-pane fade" id="pills-rejected" role="tabpanel">
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <table class="table table-hover table-bordered dataTables-example" width="100%">
+                                        <thead class="text-center">
+                                        <tr>
+                                            <th><b>Status</b></th>
+                                            <th><b>Tracking ID</b></th>
+                                            <th><b>Resident Name</b></th>
+                                            <th><b>Address</b></th>
+                                            <th><b>Purpose</b></th>
+                                            <th><b>Date Requested</b></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                        <tr>
+                                            <td><p class="btn-danger text-white mt-3">REJECTED</p></td>
+                                            <td> BCB146Z150000001 </td>
+                                            <td> John S. Doe </td>
+                                            <td> 142 Cabrera Street </td>
+                                            <td> Education Requirement </td>
+                                            <td> 9/25/2020 </td>
+                                          </tr>
+                                        <tr>
+                                            <td><p class="btn-danger text-white mt-3">REJECTED</p></td>
+                                            <td> COIB146Z150000001 </td>
+                                            <td> Albert S. Nicolas </td>
+                                            <td> 142 Cabrera Street </td>
+                                            <td> Occupation Requirement </td>
+                                            <td> 9/25/2020 </td>
+                                             </tr>
+                                        <tr>
+                                            <td><p class="btn-danger text-white mt-3">REJECTED</p></td>
+                                            <td> CORB146Z150000001 </td>
+                                            <td> John N. Reyes </td>
+                                            <td> 142 Cabrera Street </td>
+                                            <td> Financial Requirement </td>
+                                            <td> 9/25/2020 </td>
+                                          </tr>
+                                        <tr>
+                                            <td><p class="btn-danger text-white mt-3">REJECTED</p></td>
+                                            <td> RBIIB146Z150000001 </td>
+                                            <td> Marlon R. Santos </td>
+                                            <td> 142 Cabrera Street </td>
+                                            <td> Education Assistance </td>
+                                            <td> 9/25/2020 </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>  
+                            </div>
                         </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
