@@ -15,7 +15,7 @@
     <div class="wrapper">
         <nav id="sidebar" class="active">
             <div class="sidebar-header">
-                <img src="assets/img/Barangay-info-logo.png" alt="bootraper logo" class="app-logo">
+                <a href="../barangay-info-system/index.html"><img src="assets/img/Barangay-info-logo.png" alt="bootraper logo" class="app-logo"></a>
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>
@@ -38,9 +38,6 @@
                 </li>
                 <li>
                     <a href="Accounts.html"><i class="fas fa-user-friends"></i> Accounts</a>
-                </li>
-                <li>
-                    <a href="settings.html"><i class="fas fa-cog"></i> System Configurations</a>
                 </li>
             </ul>
         </nav>
@@ -72,6 +69,7 @@
                     </ul>
                 </div>
             </nav>
+
             <div class="content">
                 <div class="card-header bg-info text-white font-weight-bold">Resident Information</div>
                 <div class="container-fluid">
@@ -177,7 +175,102 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="modal fade" id="exampleModalApproved" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <p class="modal-title font-weight-bold">View Resident Informations</p>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-left">
+                                                <div class="row mt-3">
+                                                    <div class="col-md-3">
+                                                        <label><b>First Name</b></label>
+                                                        <input type="text"  placeholder="John" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Middle Name</b></label>
+                                                        <input type="text"  placeholder="Santos" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Last Name</b></label>
+                                                        <input type="text"  placeholder="Doe" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Gender</b></label>
+                                                        <select class="form-control">
+                                                            <option>Male</option>
+                                                            <option>Female</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-md-3">
+                                                        <label><b>Birth Date</b></label>
+                                                        <input type="text"  placeholder="2/10/1996" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Contact Number</b></label>
+                                                        <input type="text"  placeholder="09123456789" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Email Address</b></label>
+                                                        <input type="email"  placeholder="johndoe@gmail.com" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Civil Status</b></label>
+                                                        <select class="form-control">
+                                                            <option>Single</option>
+                                                            <option>Married</option>
+                                                            <option>Widowed</option>
+                                                            <option>Divorced</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-md-3">
+                                                        <label><b>Upload a Picture</b></label>
+                                                        <div class="input-group">
+                                                            <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                                                aria-describedby="inputGroupFileAddon01">
+                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Voting Status</b></label>
+                                                        <select class="form-control">
+                                                            <option>Yes</option>
+                                                            <option>No</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Occupation</b></label>
+                                                        <input type="text"  placeholder="Construction Worker" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label><b>Date Registered</b></label>
+                                                        <input type="text"  placeholder="09/15/2020" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-md-6">
+                                                        <label><b>Birth Place</b></label>
+                                                        <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                    </div>
+                                                    
+                                                    <div class="col-md-6">
+                                                        <label><b>Address</b></label>
+                                                        <input type="text"  placeholder="Sta Cruz, Manila" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="content">
                                     <div class="container-fluid">
                                         <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
@@ -242,7 +335,7 @@
                                                             <td> Sta Cruz, Manila </td>
                                                             <td> 09123456789 </td>
                                                             <td> 09/15/2020 </td>
-                                                            <td> <button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                            <td> <button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalApproved">View</button></td>
                                                           </tr>
                                                         </tbody>
                                                 </table>
@@ -270,7 +363,7 @@
                                                         <td> Sta Cruz, Manila </td>
                                                         <td> 09123456789 </td>
                                                         <td> 09/15/2020 </td>
-                                                        <td> <button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModal2">View</button></td>
+                                                        <td> <button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalApproved">View</button></td>
                                                       </tr>
                                                     </tbody>
                                             </table>
