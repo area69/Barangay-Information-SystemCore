@@ -22,7 +22,7 @@
                         <div class="row">  
                             <div class="col-md-3"></div>
                             <div class="col-md-6">      
-                                <select class="form-control font-weight-bold">
+                                <select class="form-control font-weight-bold" id="my-select">
                                     <option value="1">Resident</option>
                                     <option value="2">Kagawad</option>
                                     <option value="3">Tanod</option>
@@ -49,8 +49,13 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('my-select').addEventListener('change', function() {
+            
+        });
+    </script>
+        
     <script src="assets/vendor/jquery3/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap4/js/bootstrap.min.js"></script>
-
 </body>
 </html>

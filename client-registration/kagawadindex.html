@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Kagawad Reports | Barangay Information System</title>
+
+    <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <a href="dashboard.html"><img src="assets/images/Barangay-info-logo.png" alt="bootraper logo" class="app-logo"></a>
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="family-registration.html"><i class="fas fa-user"></i> Family</a>
+                </li>
+                <li>
+                    <a href="kagawadindex.html" class="active"><i class="fas fa-file"></i> Kagawad Report</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary default-secondary-menu"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown mr-1">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-bell"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>&nbsp;Juan Dela Cruz</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="profile.html" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="../website/index.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="content">
+                <div class="card-header bg-info text-white font-weight-bold">Kagawad Reports</div>
+                <div class="container-fluid">
+                    <div class="row mt-3">
+            <div class="card">
+                <div class="card-header font-weight-bold text-right">
+                       <a class="btn btn-outline-primary " data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-user-plus"></i>&nbsp; Add Report</a>       
+                 </div>
+                 <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title font-weight-bold">Add Kawagad Report</p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-left">
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <label><b>Kagawad</b></label>
+                                        <input type="text"  placeholder="Juan Dela Cruz" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label><b>Date Recorded</b></label>
+                                        <input type="text"  placeholder="9/25/2020" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label><b>Time Recorded</b></label>
+                                        <input type="text"  placeholder="8:50 PM" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label><b>Reports</b></label>
+                                        <textarea type="text" class="form-control"> Sample Report </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success"><b>Save</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModalKR2" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title font-weight-bold">View Kawagad Report</p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-left">
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <label><b>Kagawad</b></label>
+                                        <input type="text"  placeholder="Juan Dela Cruz" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label><b>Date Recorded</b></label>
+                                        <input type="text"  placeholder="9/25/2020" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label><b>Time Recorded</b></label>
+                                        <input type="text"  placeholder="8:50 PM" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <label><b>Reports</b></label>
+                                        <textarea type="text" class="form-control"> Sample Report </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info"><b>Edit</b></button>
+                                <button type="button" class="btn btn-success"><b>Save</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-title"></p>
+                    <table class="table table-hover table-bordered dataTables-example" width="100%">
+                        <thead class="text-center">
+                        <tr>
+                            <th><b>Status</b></th>
+                            <th><b>Kagawad</b></th>
+                            <th><b>Date Recorded</b></th>
+                            <th><b>Time Recorded</b></th>
+                            <th><b>Reports</b></th>
+                            <th><b>Actions</b></th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-center">
+                        <tr>
+                            <td><p class="btn-warning text-white mt-3">PENDING</p></td>
+                            <td> John S. Doe </td>
+                            <td> 9/20/2020 </td>
+                            <td> 12:20 PM </td>
+                            <td> Sample Report </td>
+                            <td><button type="button" class="btn btn-info font-weight-bold" data-toggle="modal" data-target="#exampleModalKR2">View</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+    <script src="assets/vendor/jquery3/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/solid.min.js"></script>
+    <script src="assets/vendor/fontawesome5/js/fontawesome.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
