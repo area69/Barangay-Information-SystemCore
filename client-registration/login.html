@@ -8,6 +8,7 @@
 
     <link href="assets/vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/auth.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
 </head>
 <body>
@@ -22,7 +23,7 @@
                         <div class="row">  
                             <div class="col-md-3"></div>
                             <div class="col-md-6">      
-                                <select class="form-control font-weight-bold" id="my-select">
+                                <select class="form-control font-weight-bold" id="myselect">
                                     <option value="1">Resident</option>
                                     <option value="2">Kagawad</option>
                                     <option value="3">Tanod</option>
@@ -42,17 +43,35 @@
                                 <label class="custom-control-label" for="remember-me">Remember me</label>
                             </div>
                         </div>
-                        <a href="dashboard.html"><button class="btn btn-primary shadow-2 mb-4">Login</button></a>
+                        <input class="btn btn-primary shadow-2 mb-4" id="buttonLogin" type="button" value="Login"/>
                     <p class="mb-2 text-muted">Forgot password? <a href="../barangay-info-system/forgot-password.html">Reset</a></p>
-                    <p class="mb-0 text-muted">Don’t have an account? <a href="../bootstrap-multi-step-registration/index.html">Signup</a></p>
+                    <p class="mb-0 text-muted">Don’t have an account? <a href="../client-registration/index.html">Signup</a></p>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        document.getElementById('my-select').addEventListener('change', function() {
-            
+      $(document).ready(function(){ 
+        $('#buttonLogin').click(function(){ 
+           var id = $('#myselect :selected').val();
+            if (id == 1) 
+            {   
+                window.location.href='../client-registration/dashboard.html';
+            } 
+            else if (id == 2) 
+            {
+                window.location.href='../client-registration/kagawadindex.html';
+            } 
+            else if (id == 3) 
+            {
+                window.location.href='../client-registration/tanodindex.html';
+            } 
+            else 
+            {
+                window.location.href='../client-registration/healthworkerindex.html';
+            }
         });
+      });
     </script>
         
     <script src="assets/vendor/jquery3/jquery.min.js"></script>
