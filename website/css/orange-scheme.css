@@ -451,7 +451,7 @@ input.mainBtn {
 }
 
 #blogPosts {
-  background-image: url("../images/includes/blogPosts.jpg");
+  background-image: url("../images/includes/background3.jpg");
 }
 
 #blog {
@@ -476,10 +476,14 @@ input.mainBtn {
   overflow: hidden;
 }
 
+.parallax-overlaylogo {
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 350px;
+}
+
 .parallax-overlay {
   background-color: rgba(0, 0, 0, 0.65);
 }
-
 .pageTitle {
   padding-top: 70px;
   padding-bottom: 70px;
