@@ -10,7 +10,11 @@
     <link href="assets/css/master.css" rel="stylesheet">
     <link href="assets/vendor/flagiconcss3/css/flag-icon.min.css" rel="stylesheet">
     <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
-    <link href="assets/vendor/chartsjs/Chart.min.css" rel="stylesheet">
+    <link href="assets/vendor/chartsjs/Chart.min.css" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.4.2/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.4.2/sweetalert2.min.css" />
+
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
 </head>
 
@@ -215,8 +219,8 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-success"><b>Approved</b></button>
-                                                                            <button type="button" class="btn btn-danger"><b>Rejected</b></button>
+                                                                            <button type="button" class="btn btn-success type-success" data-dismiss="modal"><b>Approved</b></button>
+                                                                            <button type="button" class="btn btn-danger type-danger" data-dismiss="modal"s><b>Rejected</b></button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -646,8 +650,8 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-success"><b>Approved</b></button>
-                                                                            <button type="button" class="btn btn-danger"><b>Rejected</b></button>
+                                                                            <button type="button" class="btn btn-success type-success" data-dismiss="modal"><b>Approved</b></button>
+                                                                            <button type="button" class="btn btn-danger type-danger" data-dismiss="modal"s><b>Rejected</b></button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1010,8 +1014,8 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-success"><b>Approved</b></button>
-                                                                    <button type="button" class="btn btn-danger"><b>Rejected</b></button>
+                                                                    <button type="button" class="btn btn-success type-success" data-dismiss="modal"><b>Approved</b></button>
+                                                                    <button type="button" class="btn btn-danger type-danger" data-dismiss="modal"s><b>Rejected</b></button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1221,8 +1225,8 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-success"><b>Approved</b></button>
-                                                                    <button type="button" class="btn btn-danger"><b>Rejected</b></button>
+                                                                    <button type="button" class="btn btn-success type-success" data-dismiss="modal"><b>Approved</b></button>
+                                                                    <button type="button" class="btn btn-danger type-danger" data-dismiss="modal"s><b>Rejected</b></button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1500,6 +1504,22 @@
             </div>
         </div>
     </div>
+    <script>
+        $(function() {
+            $('.type-success').click(() => {
+                swal({
+                type: 'success',
+                title: 'Successfully Accepted!',
+                })
+            });
+            $('.type-danger').click(() => {
+                swal({
+                type: 'error',
+                title: 'Rejected!',
+                })
+            });
+        });
+    </script>
 
     <script src="assets/vendor/jquery3/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap4/js/bootstrap.bundle.min.js"></script>
