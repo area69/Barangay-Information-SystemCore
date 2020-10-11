@@ -83,7 +83,7 @@
                 <div class="container-fluid">
                     <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#pills-scheddocs" role="tab">Request Documents Schedules</a>
+                            <a class="nav-link active" data-toggle="pill" href="#pills-scheddocs" role="tab">Document Release Schedules</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="pill" href="#pills-incidentrpt" role="tab">Incident Report Schedules</a>
@@ -98,81 +98,15 @@
                                             <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
                                                 <li class="nav-item">
                                                     <a class="nav-link active" data-toggle="pill" href="#pills-pending"
-                                                        role="tab">Pending Schedules</a>
+                                                        role="tab">For Pickup</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" data-toggle="pill" href="#pills-approved"
-                                                        role="tab">Approved Schedules</a> </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#pills-rejected"
-                                                        role="tab">Rejected Schedules</a>
-                                                </li>
+                                                        role="tab">Released Documents</a> </li>
                                             </ul>
                                             <div class="tab-content" id="pills-tabContent">
-                                                <div class="tab-pane fade show active" id="pills-pending"
-                                                    role="tabpanel">
+                                                <div class="tab-pane fade show active" id="pills-pending" role="tabpanel">
                                                     <div class="card">
-                                                        <div class="modal fade" id="exampleModal2" tabindex="-1"
-                                                            role="dialog" aria-hidden="true">
-                                                            <div class="modal-dialog modal-lg" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <p class="modal-title font-weight-bold">View
-                                                                            Resident Request Form</p>
-                                                                        <button type="button" class="close"
-                                                                            data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="modal-body text-left">
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-md-4">
-                                                                                <label><b>First Name</b></label>
-                                                                                <input type="text" placeholder="John"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-4">
-                                                                                <label><b>Middle Name</b></label>
-                                                                                <input type="text" placeholder="Santos"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-4">
-                                                                                <label><b>Last Name</b></label>
-                                                                                <input type="text" placeholder="Doe"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row mt-3">
-                                                                            <div class="col-md-3">
-                                                                                <label><b>Date Schedule</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="09/15/1996"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-3">
-                                                                                <label><b>Contact Number</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="09123456789"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <label><b>Documents Request</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="Barangay Clearance"
-                                                                                    disabled class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-success"><a
-                                                                                href="assets/blank.pdf"
-                                                                                target="_blank"><b>Approved</b></a></button>
-                                                                        <button type="button"
-                                                                            class="btn btn-danger"><b>Rejected</b></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                         <div class="card-body">
                                                             <p class="card-title"></p>
                                                             <table
@@ -181,12 +115,11 @@
                                                                 <thead class="text-center">
                                                                     <tr>
                                                                         <th><b>Status</b></th>
-                                                                        <th><b>Date Schedule</b></th>
-                                                                        <th><b>First Name</b></th>
-                                                                        <th><b>Middle Name</b></th>
-                                                                        <th><b>Last Name</b></th>
+                                                                        <th><b>Full Name</b></th>
                                                                         <th><b>Address</b></th>
-                                                                        <th><b>Contact No</b></th>
+                                                                        <th><b>Document Types</b></th>
+                                                                        <th><b>Date Approved</b></th>
+                                                                        <th><b>Date For Pick Up</b></th>
                                                                         <th><b>Actions</b></th>
                                                                     </tr>
                                                                 </thead>
@@ -194,36 +127,29 @@
                                                                     <tr>
                                                                         <td>
                                                                             <p class="btn-warning text-white mt-3">
-                                                                                PENDING</p>
+                                                                                For Pick-Up</p>
                                                                         </td>
-                                                                        <td> 09/15/2020 </td>
-                                                                        <td>John </td>
-                                                                        <td> Santos </td>
-                                                                        <td> Doe </td>
+                                                                        <td>John Santos Doe </td>
                                                                         <td> Sta Cruz, Manila </td>
-                                                                        <td> 09123456789 </td>
+                                                                        <td> Barangay Clearance </td>
+                                                                        <td> 09/19/2020 </td>
+                                                                        <td> 09/22/2020 </td>
                                                                         <td> <button type="button"
-                                                                                class="btn btn-info font-weight-bold"
-                                                                                data-toggle="modal"
-                                                                                data-target="#exampleModal2">View</button>
-                                                                        </td>
+                                                                            class="btn btn-info font-weight-bold">Pick-Up</button> </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
                                                                             <p class="btn-warning text-white mt-3">
-                                                                                PENDING</p>
+                                                                                For Pick-Up</p>
                                                                         </td>
-                                                                        <td> 09/16/2020 </td>
-                                                                        <td>Albert </td>
-                                                                        <td> Reyes </td>
-                                                                        <td> Nicolas </td>
+                                                                        <td> Albert Reyes Nicolas </td>
                                                                         <td> Sta Cruz, Manila </td>
-                                                                        <td> 09876543210 </td>
+                                                                        <td> Certificate of Indigence </td>
+                                                                        <td> 09/21/2020 </td>
+                                                                        <td> 09/24/2020 </td>
                                                                         <td> <button type="button"
-                                                                                class="btn btn-info font-weight-bold"
-                                                                                data-toggle="modal"
-                                                                                data-target="#exampleModal2">View</button>
-                                                                        </td>
+                                                                            class="btn btn-info font-weight-bold">Pick-Up</button>
+                                                                    </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -232,60 +158,6 @@
                                                 </div>
                                                 <div class="tab-pane fade" id="pills-approved" role="tabpanel">
                                                     <div class="card">
-                                                        <div class="modal fade" id="exampleModalApproved" tabindex="-1"
-                                                            role="dialog" aria-hidden="true">
-                                                            <div class="modal-dialog modal-lg" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <p class="modal-title font-weight-bold">View
-                                                                            Resident Request Form</p>
-                                                                        <button type="button" class="close"
-                                                                            data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="modal-body text-left">
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-md-4">
-                                                                                <label><b>First Name</b></label>
-                                                                                <input type="text" placeholder="John"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-4">
-                                                                                <label><b>Middle Name</b></label>
-                                                                                <input type="text" placeholder="Santos"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-4">
-                                                                                <label><b>Last Name</b></label>
-                                                                                <input type="text" placeholder="Doe"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row mt-3">
-                                                                            <div class="col-md-3">
-                                                                                <label><b>Date Schedule</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="09/15/1996"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-3">
-                                                                                <label><b>Contact Number</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="09123456789"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <label><b>Documents Request</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="Barangay Clearance"
-                                                                                    disabled class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                         <div class="card-body">
                                                             <p class="card-title"></p>
                                                             <table
@@ -294,162 +166,35 @@
                                                                 <thead class="text-center">
                                                                     <tr>
                                                                         <th><b>Status</b></th>
-                                                                        <th><b>Date Schedule</b></th>
-                                                                        <th><b>First Name</b></th>
-                                                                        <th><b>Middle Name</b></th>
-                                                                        <th><b>Last Name</b></th>
+                                                                        <th><b>Full Name</b></th>
                                                                         <th><b>Address</b></th>
-                                                                        <th><b>Contact No</b></th>
-                                                                        <th><b>Actions</b></th>
+                                                                        <th><b>Document Types</b></th>
+                                                                        <th><b>Date Approved</b></th>
+                                                                        <th><b>Date Received</b></th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody class="text-center">
                                                                     <tr>
                                                                         <td>
                                                                             <p class="btn-success text-white mt-3">
-                                                                                APPROVED</p>
+                                                                                Picked-Up</p>
                                                                         </td>
-                                                                        <td> 09/15/2020 </td>
-                                                                        <td>John </td>
-                                                                        <td> Santos </td>
-                                                                        <td> Doe </td>
+                                                                        <td>John Santos Doe </td>
                                                                         <td> Sta Cruz, Manila </td>
-                                                                        <td> 09123456789 </td>
-                                                                        <td> <button type="button"
-                                                                                class="btn btn-info font-weight-bold"
-                                                                                data-toggle="modal"
-                                                                                data-target="#exampleModalApproved">View</button>
-                                                                        </td>
+                                                                        <td> Barangay Clearance </td>
+                                                                        <td> 09/19/2020 </td>
+                                                                        <td> 09/22/2020 </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
                                                                             <p class="btn-success text-white mt-3">
-                                                                                APPROVED</p>
+                                                                                Picked-Up</p>
                                                                         </td>
-                                                                        <td> 09/16/2020 </td>
-                                                                        <td>Albert </td>
-                                                                        <td> Reyes </td>
-                                                                        <td> Nicolas </td>
+                                                                        <td> Albert Reyes Nicolas </td>
                                                                         <td> Sta Cruz, Manila </td>
-                                                                        <td> 09876543210 </td>
-                                                                        <td> <button type="button"
-                                                                                class="btn btn-info font-weight-bold"
-                                                                                data-toggle="modal"
-                                                                                data-target="#exampleModalApproved">View</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane fade" id="pills-rejected" role="tabpanel">
-                                                    <div class="card">
-                                                        <div class="modal fade" id="exampleModalRejected" tabindex="-1"
-                                                            role="dialog" aria-hidden="true">
-                                                            <div class="modal-dialog modal-lg" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <p class="modal-title font-weight-bold">View
-                                                                            Resident Request Form</p>
-                                                                        <button type="button" class="close"
-                                                                            data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="modal-body text-left">
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-md-4">
-                                                                                <label><b>First Name</b></label>
-                                                                                <input type="text" placeholder="John"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-4">
-                                                                                <label><b>Middle Name</b></label>
-                                                                                <input type="text" placeholder="Santos"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-4">
-                                                                                <label><b>Last Name</b></label>
-                                                                                <input type="text" placeholder="Doe"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row mt-3">
-                                                                            <div class="col-md-3">
-                                                                                <label><b>Date Schedule</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="09/15/1996"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-3">
-                                                                                <label><b>Contact Number</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="09123456789"
-                                                                                    class="form-control">
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <label><b>Documents Request</b></label>
-                                                                                <input type="text"
-                                                                                    placeholder="Barangay Clearance"
-                                                                                    disabled class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <p class="card-title"></p>
-                                                            <table
-                                                                class="table table-hover table-bordered dataTables-example"
-                                                                width="100%">
-                                                                <thead class="text-center">
-                                                                    <tr>
-                                                                        <th><b>Status</b></th>
-                                                                        <th><b>Date Schedule</b></th>
-                                                                        <th><b>First Name</b></th>
-                                                                        <th><b>Middle Name</b></th>
-                                                                        <th><b>Last Name</b></th>
-                                                                        <th><b>Address</b></th>
-                                                                        <th><b>Contact No</b></th>
-                                                                        <th><b>Actions</b></th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody class="text-center">
-                                                                    <tr>
-                                                                        <td>
-                                                                            <p class="btn-danger text-white mt-3">
-                                                                                REJECTED</p>
-                                                                        </td>
-                                                                        <td> 09/15/2020 </td>
-                                                                        <td>John </td>
-                                                                        <td> Santos </td>
-                                                                        <td> Doe </td>
-                                                                        <td> Sta Cruz, Manila </td>
-                                                                        <td> 09123456789 </td>
-                                                                        <td> <button type="button"
-                                                                                class="btn btn-info font-weight-bold"
-                                                                                data-toggle="modal"
-                                                                                data-target="#exampleModalRejected">View</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <p class="btn-danger text-white mt-3">
-                                                                                REJECTED</p>
-                                                                        </td>
-                                                                        <td> 09/16/2020 </td>
-                                                                        <td>Albert </td>
-                                                                        <td> Reyes </td>
-                                                                        <td> Nicolas </td>
-                                                                        <td> Sta Cruz, Manila </td>
-                                                                        <td> 09876543210 </td>
-                                                                        <td> <button type="button"
-                                                                                class="btn btn-info font-weight-bold"
-                                                                                data-toggle="modal"
-                                                                                data-target="#exampleModalRejected">View</button>
-                                                                        </td>
+                                                                        <td> Certificate of Indigence </td>
+                                                                        <td> 09/21/2020 </td>
+                                                                        <td> 09/24/2020 </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -464,15 +209,12 @@
                         </div>
                         <div class="tab-pane fade" id="pills-incidentrpt" role="tabpanel">
                             <div class="card">
-                                <div class="modal fade" id="exampleModalIncident" tabindex="-1"
-                                    role="dialog" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-xl" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <p class="modal-title font-weight-bold">View
-                                                    Blotter Form</p>
-                                                <button type="button" class="close"
-                                                    data-dismiss="modal" aria-label="Close">
+                                                <p class="modal-title font-weight-bold">View Blotter Records</p>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
@@ -480,7 +222,7 @@
                                                 <div class="row mt-3">
                                                     <div class="col-md-3">
                                                         <label><b>Complainant</b></label>
-                                                        <select class="form-control" disabled>
+                                                        <select class="form-control">
                                                             <option>Albert Nicolas</option>
                                                         </select>
                                                     </div>
@@ -500,7 +242,7 @@
                                                 <div class="row mt-3">
                                                     <div class="col-md-3">
                                                         <label><b>Respondent</b></label>
-                                                        <select class="form-control" disabled>
+                                                        <select class="form-control">
                                                             <option>Juanito Reyes</option>
                                                         </select>
                                                     </div>
@@ -520,23 +262,23 @@
                                                 <div class="row mt-3">
                                                     <div class="col-md-12">
                                                         <label><b>Complaint</b></label>
-                                                        <textarea type="text"  placeholder="Complaint" disabled class="form-control"></textarea>
+                                                        <textarea type="text"  placeholder="Complaint" class="form-control"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="row mt-3">
                                                     <div class="col-md-6">
                                                         <label><b>Incidence</b></label>
-                                                        <input type="text"  placeholder="Location of Incidence" disabled class="form-control">
+                                                        <input type="text"  placeholder="Location of Incidence" class="form-control">
                                                     </div>
                                                     <div class="col-md-3">
                                                         <label><b>Incident Type</b></label>
-                                                        <select class="form-control" disabled>
+                                                        <select class="form-control">
                                                             <option>Violence</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-md-3">
                                                         <label><b>Status</b></label>
-                                                        <select class="form-control" disabled>
+                                                        <select class="form-control">
                                                             <option>Ongoing</option>
                                                             <option>Solved</option>
                                                             <option>Settled</option>
@@ -545,30 +287,35 @@
                                                 
                                                 </div>
                                                 <div class="row mt-3">
-                                                    <div class="col-md-3">
-                                                        <label><b>Date Recorded</b></label>
-                                                        <input type="text"  placeholder="9/20/2020" disabled class="form-control text-center">
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <label><b>Date Recorded</b></label>
+                                                                <input type="text"  placeholder="9/20/2020" disabled class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Time Recorded</b></label>
+                                                                <input type="text"  placeholder="12:20 PM" disabled class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Date</b></label>
+                                                                <input type="text"  placeholder="9/20/2020" disabled class="form-control text-center">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label><b>Incident Time</b></label>
+                                                                <input type="text"  placeholder="10:30 AM" disabled class="form-control text-center">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col-md-3">
-                                                        <label><b>Time Recorded</b></label>
-                                                        <input type="text"  placeholder="12:20 PM" disabled class="form-control text-center">
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label><b>Incident Date</b></label>
-                                                        <input type="text"  placeholder="9/20/2020" disabled class="form-control text-center">
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label><b>Incident Time</b></label>
-                                                        <input type="text"  placeholder="10:30 AM" disabled class="form-control text-center">
+                                                        <label><b>Date Summoned</b></label>
+                                                        <input type="date" class="form-control text-center">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-success"><a
-                                                        href="assets/blank.pdf"
-                                                        target="_blank"><b>Approved</b></a></button>
-                                                <button type="button"
-                                                    class="btn btn-danger"><b>Rejected</b></button>
+                                                <button type="button" class="btn btn-success"><b>Approved</b></button>
+                                                <button type="button" class="btn btn-danger"><b>Rejected</b></button>
                                             </div>
                                         </div>
                                     </div>
@@ -581,8 +328,9 @@
                                         <thead class="text-center">
                                             <tr>
                                                 <th><b>Status</b></th>
-                                                <th><b>Date Schedule</b></th>
-                                                <th><b>Full Name</b></th>
+                                                <th><b>Date subpoena</b></th>
+                                                <th><b>Complainant</b></th>
+                                                <th><b>Respondent</b></th>
                                                 <th><b>Address</b></th>
                                                 <th><b>Incident Type</b></th>
                                                 <th><b>Contact No</b></th>
@@ -597,13 +345,14 @@
                                                 </td>
                                                 <td> 09/15/2020 </td>
                                                 <td>John Doe, Dela Cruz</td>
+                                                <td>John Doe, Dela Cruz</td>
                                                 <td> Sta Cruz, Manila </td>
                                                 <td> Blotter </td>
                                                 <td> 09123456789 </td>
                                                 <td> <button type="button"
                                                         class="btn btn-info font-weight-bold"
                                                         data-toggle="modal"
-                                                        data-target="#exampleModalIncident">View</button>
+                                                        data-target="#exampleModal2">View</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -613,13 +362,14 @@
                                                 </td>
                                                 <td> 09/16/2020 </td>
                                                 <td>Albert Reyes, Nicolas</td>
+                                                <td>John Doe, Dela Cruz</td>
                                                 <td> Sta Cruz, Manila </td>
                                                 <td> Lupon </td>
                                                 <td> 09876543210 </td>
                                                 <td> <button type="button"
                                                         class="btn btn-info font-weight-bold"
                                                         data-toggle="modal"
-                                                        data-target="#exampleModalIncident">View</button>
+                                                        data-target="#exampleModal2">View</button>
                                                 </td>
                                             </tr>
                                         </tbody>
