@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/styleIndex.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.4.2/sweetalert2.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.4.2/sweetalert2.min.js"></script>
+		<link rel="shortcut icon" href="../client-registration/assets/images/favicon.ico" type="image/x-icon" />
     </head>
 
     <body>
@@ -264,19 +267,6 @@
 												</div>	
 											</div>
 										</div>
-				                        <button type="button" class="btn btn-previous">Previous</button>
-				                        <button type="button" class="btn btn-next text-right">Next</button>
-				                    </div>
-			                    </fieldset>
-			                    
-			                    <fieldset>
-		                        	<div class="form-top">
-		                        		<div class="form-top-left">
-		                        			<h3>Step 3 / 3</h3>
-		                            		<p>Additional Information</p>
-		                        		</div>
-		                            </div>
-		                            <div class="form-bottom">	
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
@@ -297,6 +287,19 @@
 												</div>	
 											</div>
 										</div>
+				                        <button type="button" class="btn btn-previous">Previous</button>
+				                        <button type="button" class="btn btn-next text-right">Next</button>
+				                    </div>
+			                    </fieldset>
+			                    
+			                    <fieldset>
+		                        	<div class="form-top">
+		                        		<div class="form-top-left">
+		                        			<h3>Step 3 / 3</h3>
+		                            		<p>Additional Information</p>
+		                        		</div>
+		                            </div>
+		                            <div class="form-bottom">	
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
@@ -326,6 +329,22 @@
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
+													<label>Cluster *</label>
+													<select class="form-control">
+														<option>Cluster 1</option>  
+														<option>Cluster 2</option>  
+														<option>Cluster 3</option>  
+														<option>Cluster 4</option>  
+														<option>Cluster 5</option>  
+														<option>Cluster 6</option>
+													</select>
+												</div>	
+											</div>
+										
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
 												<label>Street *</label>
 												<select class="form-control">
 													<option>Cabrera Street</option>  
@@ -343,37 +362,25 @@
 												</select>
 											</div>
 											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Street No</label>
+													<input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+												</div>	
+											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<label>House Number *</label>
+													<label>Compound</label>
 													<select class="form-control">
-														<option>CS-1</option>  
-														<option>CS-2</option>  
-														<option>CS-3</option>  
-														<option>CS-4</option>  
-														<option>CS-5</option>  
-														<option>CS-6</option>  
-														<option>CS-7</option>  
-														<option>CS-8</option>  
-														<option>CS-9</option>  
-														<option>CS-10</option>  
-													</select>
-												</div>	
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>House ID</label>
-													<input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
-												</div>	
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Subdivision/Purok/Sitio</label>
-													<input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+														<option>Celeste</option>  
+														<option>Glendale</option>  
+														<option>Sonoma</option>  
+														<option>Yakal</option>  
+														<option>Almasiga</option>  
+														<option>Reyes</option>  
+													</select>	
 												</div>	
 											</div>
 											<div class="col-md-6">
@@ -406,8 +413,43 @@
 											</div>
 										</div>
 										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Security Question</label>
+													<select class="form-control">
+														<option>What is your favorite Color?</option>  
+														<option>Who is your first Crush?</option>  
+														<option>What is the first and last name of your first boyfriend or girlfriend?</option>  
+														<option>Which phone number do you remember most from your childhood?</option>  
+														<option>What was your favorite place to visit as a child?</option>  
+														<option>Who is your favorite actor, musician, or artist?</option>  
+														<option>What is the name of your favorite pet?</option>  
+														<option>In what city were you born?</option>  
+														<option>What high school did you attend?</option>  
+														<option>What is the name of your first school?</option>  
+														<option>What is your favorite movie?</option>  
+														<option>What is your mother's maiden name?</option>  
+														<option>What street did you grow up on?</option>  
+														<option>What was the make of your first car?</option>  
+														<option>When is your anniversary?</option>  
+														<option>What is your favorite color?</option>  
+														<option>What is your father's middle name?</option>  
+														<option>What is the name of your first grade teacher?</option>  
+														<option>What was your high school mascot?</option>  
+														<option>Which is your favorite web browser?</option>  
+													</select>	
+												</div>	
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Security Answer</label>
+													<input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+												</div>	
+											</div>
+										</div>
+										<div class="row">
 											<button type="button" class="btn btn-previous">Previous</button>
-											<button type="submit" class="btn"><a href="../website/index.html"></a>Sign me up!</button>
+											<button type="submit" class="btn type-success"><a href="../website/index.html"></a>Sign me up!</button>
 										</div>
 				                    </div>
 			                    </fieldset>
@@ -418,7 +460,22 @@
             </div>
         </div>
 
-
+		<script>
+			$(function() {
+				$('.type-success').click(() => {
+					swal({
+					type: 'success',
+					title: 'Successfully Accepted!',
+					})
+				});
+				$('.type-danger').click(() => {
+					swal({
+					type: 'error',
+					title: 'Rejected!',
+					})
+				});
+			});
+		</script>
         <!-- Javascript -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
