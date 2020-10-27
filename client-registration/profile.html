@@ -11,7 +11,6 @@
      <link rel="shortcut icon" href="assets/images/favicon.ico" />
 </head>
 <body>
-
     <div class="wrapper">
         <nav id="sidebar" class="active">
             <div class="sidebar-header">
@@ -83,74 +82,377 @@
                                 <h5 class="card-title">Personal Information</h5>
                                 <form class="needs-validation" novalidate accept-charset="utf-8">
                                     <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="email">Email</label>
-                                            <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                            <small class="form-text text-muted">Enter a valid email address.</small>
+                                        <div class="form-group col-md-3">
+                                            <label for="city">First Name</label>
+                                            <input type="text" class="form-control" value="Juan" disabled required>
                                             <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please enter your email address.</div>
+                                            <div class="invalid-feedback">Please enter your First Name.</div>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="password">Password</label>
-                                            <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                            <small class="form-text text-muted">Your password must be 8-20 characters long, contain letters and numbers only.</small>
+                                        <div class="form-group col-md-3">
+                                            <label for="city">Middle Name</label>
+                                            <input type="text" class="form-control" value="Santos" disabled required>
                                             <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please enter your password.</div>
+                                            <div class="invalid-feedback">Please enter your Middle Name.</div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="address">Address</label>
-                                        <input type="text" class="form-control" name="address" placeholder="1234 Main St, Unit, Building, or Floor" required>
-                                        <div class="valid-feedback">Looks good!</div>
-                                        <div class="invalid-feedback">Please enter your address.</div>
+                                        <div class="form-group col-md-3">
+                                            <label for="city">Last Name</label>
+                                            <input type="text" class="form-control" value="Dela Cruz" disabled required>
+                                            <div class="valid-feedback">Looks good!</div>
+                                            <div class="invalid-feedback">Please enter your Last Name..</div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="city">Suffix (Ex. Jr. Sr. II. III)</label>
+                                            <input type="text" class="form-control" value="N/A" disabled required>
+                                            <div class="valid-feedback">Looks good!</div>
+                                            <div class="invalid-feedback">Please enter your Suffix (Ex. Jr. Sr. II. III)..</div>
+                                        </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="city">City</label>
-                                            <input type="text" class="form-control" name="city" placeholder="City" required>
+                                        <div class="form-group col-md-3">
+                                            <label for="city">Nick Name</label>
+                                            <input type="text" class="form-control" value="Juan" required>
                                             <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please enter your City.</div>
+                                            <div class="invalid-feedback">Please enter your Nick Name.</div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" value="juandelacruz@gmail.com" required>
+                                            <div class="valid-feedback">Looks good!</div>
+                                            <div class="invalid-feedback">Please enter your Email Address.</div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="city">Contact Number</label>
+                                            <input type="text" class="form-control" value="09123456789" required>
+                                            <div class="valid-feedback">Looks good!</div>
+                                            <div class="invalid-feedback">Please enter your Contact Number..</div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="city">Gender</label>
+                                            <select class="form-control">
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label for="city">Citizenship</label>
+                                            <select class="form-control">
+                                                <option>Filipino</option>
+                                                <option>American</option>
+                                                <option>Chinese</option>
+                                            </select>
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label for="state">State</label>
-                                            <select name="state" class="form-control" required>
-                                                <option value="" selected>Choose...</option>
-                                                <option value="1">New York</option>
-                                                <option value="2">Los Angeles</option>
-                                            </select>
+                                            <label for="city">Birth Date</label>
+                                            <input type="date" class="form-control" required>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="city">Birth Place</label>
+                                            <input type="text" class="form-control" value="Santa Cruz, Manila" required>
                                             <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please select a State.</div>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="zip">Zip code</label>
-                                            <input type="text" class="form-control" name="zip" placeholder="00000" required>
-                                            <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please enter a Zip code.</div>
+                                            <div class="invalid-feedback">Please enter your Suffix (Ex. Jr. Sr. II. III)..</div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                        </div> 
-                                         <div class="col-md-2">
-                                            <button type="submit" class="btn btn-info form-control"><i class="fas fa-save"></i> Save</button>
+                                    <div class="form-row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>	Civil Status *</label>
+                                                <select class="form-control">
+                                                    <option class="option">Single</option>
+                                                    <option class="option">Married</option>
+                                                    <option class="option">Separed</option>
+                                                    <option class="option">Widow/er</option>
+                                                </select>	
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Education *</label>
+                                                <select class="form-control">
+                                                    <option>Associate Degree Holder</option>
+                                                    <option>Bachelor Degree Holder</option>
+                                                    <option>College Gradute </option>
+                                                    <option>College Still Studying</option>
+                                                    <option>College Level </option>
+                                                    <option>Highschool Graduate</option>
+                                                    <option>Highschool Still Studying</option>
+                                                    <option>Highschool Level</option>
+                                                    <option>Elementary Graduate </option>
+                                                    <option>Elementary Still Studying</option>
+                                                    <option>Elementary Level</option>
+                                                    <option>Pre-school Graduate </option>
+                                                    <option>Pre-school Still Studying</option>
+                                                    <option>Pre-school Level</option>
+                                                    <option>Infant (Hindi pa pweding magaral)</option>
+                                                    <option>No Education </option>   
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>	Religions *</label>
+                                                <select class="form-control">
+                                                    <option>Roman Catholic</option>  
+                                                    <option>Protestant</option>  
+                                                    <option>Christian</option>  
+                                                    <option>Iglesia ni Cristo</option>  
+                                                    <option>Islam</option>  
+                                                    <option>Tribal Religions</option>  
+                                                    <option>Buddhism</option>  
+                                                    <option>Hinduism</option>  
+                                                    <option>Judaism</option>  
+                                                    <option>None</option>  
+                                                    <option>Others</option>  
+                                                 </select>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-3"></div>  
-                                        <div class="col-md-2 col-6 text-center">
-                                            <img src="assets/images/householdIDSample.png" alt="">
-                                            <h6>HHID20200001</h6>
-                                        </div> 
-                                        <div class="col-md-2 col-6 text-center">
-                                            <img src="assets/images/householdIDSample.png" alt="">
-                                            <h6>HHID20200001</h6>
-                                        </div> 
-                                        <div class="col-md-2 col-6 text-center">
-                                            <img src="assets/images/householdIDSample.png" alt="">
-                                            <h6>HHID20200001</h6>
-                                        </div> 
-                                        <div class="col-md-3"></div>
+                                    <div class="form-row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Occupation/Trabaho *</label>
+                                                <input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Company *</label>
+                                                <input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>	Work Status *</label>
+                                                <select class="form-control">
+                                                    <option>Government Employee</option>
+                                                    <option>Employed (Private)</option>
+                                                    <option>Employed (Business)</option>
+                                                    <option>OFW</option>
+                                                    <option>Remittance</option>
+                                                    <option>Unemployed</option>      
+                                                  </select>	
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Monthly Salary *</label>
+                                                <select class="form-control">
+                                                    <option>0 - 5,000</option>
+                                                    <option>6,000 - 10,000</option>
+                                                    <option>11,000 - 20,000</option>
+                                                    <option>21,000 - 30,000</option>
+                                                    <option>31,000 - 40,000</option>
+                                                    <option>41,000 and Above</option>
+                                                </select>	
+                                            </div>	
+                                        </div>
                                     </div>
+                                    <div class="form-row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Are you a registered voter?</label>
+                                                <select class="form-control">
+                                                    <option>Yes</option>
+                                                    <option>Yes in other Barangay</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>	A person with disability?</label>
+                                                <select class="form-control">
+                                                    <option class="option">No</option>
+                                                    <option class="option">Yes</option>
+                                                </select>	
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>	Are your an Informal Settler? *</label>
+                                                <select class="form-control">
+                                                   <option>Yes</option>  
+                                                   <option>No</option> 
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Do you have Electricity? *</label>
+                                                <select class="form-control">
+                                                    <option>Yes</option>  
+                                                    <option>No</option> 
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Way of transportation?</label>
+                                                <select class="form-control">
+                                                    <option>Private Car</option>
+                                                    <option>Motorcycle</option>
+                                                    <option>Public Transportation ( Commute )</option>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>	Have a clean water? *</label>
+                                                <select class="form-control">
+                                                   <option>Yes</option>  
+                                                   <option>No</option> 
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Residential Status *</label>
+													<select class="form-control">
+														<option>Renting</option>  
+														<option>Owned</option> 
+													</select>
+												</div>	
+                                            </div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>	Residential Date *</label>
+													<input type="date" class=" form-control">
+												</div>
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Cluster *</label>
+													<select class="form-control">
+														<option>Cluster 1</option>  
+														<option>Cluster 2</option>  
+														<option>Cluster 3</option>  
+														<option>Cluster 4</option>  
+														<option>Cluster 5</option>  
+														<option>Cluster 6</option>
+													</select>
+												</div>	
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+												<label>Street *</label>
+												<select class="form-control">
+													<option>Cabrera Street</option>  
+													<option>Camia Street</option>  
+													<option>Benitez Street</option>  
+													<option>De Guzman Street</option>  
+													<option>Epo Street</option>  
+													<option>Gamban Street</option>  
+													<option>Inez Street</option>  
+													<option>M. Dela Cruz Street</option>  
+													<option>Ma. Clara Street</option>  
+													<option>Protacio Street</option>  
+													<option>Recto Street</option>  
+													<option>Ruiz Street</option>  
+												</select>
+											</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Street No</label>
+													<input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+												</div>	
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Compound</label>
+													<select class="form-control">
+														<option>Celeste</option>  
+														<option>Glendale</option>  
+														<option>Sonoma</option>  
+														<option>Yakal</option>  
+														<option>Almasiga</option>  
+														<option>Reyes</option>  
+													</select>	
+												</div>	
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Unit/Apartment Number/Floor</label>
+													<input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+												</div>	
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label>Username *</label>
+													<input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+												</div>	
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Password *</label>
+													<input type="password" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+												</div>	
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Confirm Password *</label>
+													<input type="password" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+												</div>	
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Security Question</label>
+													<select class="form-control">
+														<option>What is your favorite Color?</option>  
+														<option>Who is your first Crush?</option>  
+														<option>What is the first and last name of your first boyfriend or girlfriend?</option>  
+														<option>Which phone number do you remember most from your childhood?</option>  
+														<option>What was your favorite place to visit as a child?</option>  
+														<option>Who is your favorite actor, musician, or artist?</option>  
+														<option>What is the name of your favorite pet?</option>  
+														<option>In what city were you born?</option>  
+														<option>What high school did you attend?</option>  
+														<option>What is the name of your first school?</option>  
+														<option>What is your favorite movie?</option>  
+														<option>What is your mother's maiden name?</option>  
+														<option>What street did you grow up on?</option>  
+														<option>What was the make of your first car?</option>  
+														<option>When is your anniversary?</option>  
+														<option>What is your favorite color?</option>  
+														<option>What is your father's middle name?</option>  
+														<option>What is the name of your first grade teacher?</option>  
+														<option>What was your high school mascot?</option>  
+														<option>Which is your favorite web browser?</option>  
+													</select>	
+												</div>	
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Security Answer</label>
+													<input type="text" name="form-last-name" placeholder="" class="form-last-name form-control" id="form-last-name">
+												</div>	
+											</div>
+                                    </div>
+									<div class="row">
+                                        <div class="col-md-8"></div>
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-info form-control">Update</button>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-success form-control" disabled>Save</button>
+                                        </div>
+									</div>
                                 </form>
                             </div>
                         </div>
